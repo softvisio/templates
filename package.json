@@ -1,0 +1,26 @@
+{
+    "name": "@softvisio/templates",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Softisio Project Templates",
+    "keywords": [
+        "softvisio",
+        "template"
+    ],
+    "homepage": "https://bitbucket.org/softvisio/templates",
+    "bugs": {
+        "url": "https://bitbucket.org/softvisio/templates/issues",
+        "email": "zdm@softvisio.net"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/softvisio/templates.git"
+    },
+    "author": "zdm <zdm@softvisio.net>",
+    "scripts": {
+        "lint": "softvisio-cli lint"
+    },
+    "lint": [
+        "**"
+    ]
+}

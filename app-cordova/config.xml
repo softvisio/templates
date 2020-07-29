@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- reference, https://cordova.apache.org/docs/en/latest/config_ref/ -->
+<widget id="com.domain.name" version="0.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>App Name</name>
+    <description>
+        App description.
+    </description>
+    <author email="zdm@softvisio.net" href="http://softvisio.net">softvisio.net</author>
+    <content src="index.html" />
+
+    <!--
+    Set to true if you don't want the interface to display any feedback when users scroll past the beginning or end of content.
+    On iOS, overscroll gestures cause content to bounce back to its original position.
+    On Android, they produce a more subtle glowing effect along the top or bottom edge of the content.
+    -->
+    <preference name="DisallowOverscroll" value="true" />
+
+    <plugin name="cordova-plugin-whitelist" />
+    <plugin name="cordova-plugin-device" />
+    <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-firebasex" spec="git+https://github.com/dpa99c/cordova-plugin-firebasex.git#cli_build">
+        <variable name="ANDROID_FIREBASE_CONFIG_FILEPATH" value="resources/android/google-services.json" />
+        <variable name="IOS_FIREBASE_CONFIG_FILEPATH" value="resources/ios/GoogleService-Info.plist" />
+    </plugin>
+
+    <!-- android -->
+    <platform name="android">
+        <allow-intent href="market:*" />
+
+        <icon density="ldpi" src="resources/android/icons/ldpi.png" />
+        <icon density="mdpi" src="resources/android/icons/mdpi.png" />
+        <icon density="hdpi" src="resources/android/icons/hdpi.png" />
+        <icon density="xhdpi" src="resources/android/icons/xhdpi.png" />
+        <icon density="xxhdpi" src="resources/android/icons/xxhdpi.png" />
+        <icon density="xxxhdpi" src="resources/android/icons/xxxhdpi.png" />
+
+        <!-- default push notifications icons, monochrome -->
+        <resource-file src="resources/android/icons/notification-default/mdpi.png" target="app/src/main/res/drawable-mdpi/notification_icon.png" />
+        <resource-file src="resources/android/icons/notification-default/hdpi.png" target="app/src/main/res/drawable-hdpi/notification_icon.png" />
+        <resource-file src="resources/android/icons/notification-default/xhdpi.png" target="app/src/main/res/drawable-xhdpi/notification_icon.png" />
+        <resource-file src="resources/android/icons/notification-default/xxhdpi.png" target="app/src/main/res/drawable-xxhdpi/notification_icon.png" />
+        <resource-file src="resources/android/icons/notification-default/xxxhdpi.png" target="app/src/main/res/drawable-xxxhdpi/notification_icon.png" />
+
+        <!-- default large push notification icon, color -->
+        <resource-file src="resources/android/icons/notification-default/notification-icon-large.png" target="app/src/main/res/drawable-xxxhdpi/notification_icon_large.png" />
+
+        <!-- instruct Firebase to use default icons for notifications -->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/notification_icon" />
+        </config-file>
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+
+        <icon src="resources/ios/icons/icon.png" width="57" height="57" />
+        <icon src="resources/ios/icons/icon@2x.png" width="114" height="114" />
+        <icon src="resources/ios/icons/icon-20.png" width="20" height="20" />
+        <icon src="resources/ios/icons/icon-20@2x.png" width="40" height="40" />
+        <icon src="resources/ios/icons/icon-20@3x.png" width="60" height="60" />
+        <icon src="resources/ios/icons/icon-24@2x.png" width="48" height="48" />
+        <icon src="resources/ios/icons/icon-27.5@2x.png" width="55" height="55" />
+        <icon src="resources/ios/icons/icon-29.png" width="29" height="29" />
+        <icon src="resources/ios/icons/icon-29@2x.png" width="58" height="58" />
+        <icon src="resources/ios/icons/icon-29@3x.png" width="87" height="87" />
+        <icon src="resources/ios/icons/icon-40.png" width="40" height="40" />
+        <icon src="resources/ios/icons/icon-40@2x.png" width="80" height="80" />
+        <icon src="resources/ios/icons/icon-44@2x.png" width="88" height="88" />
+        <icon src="resources/ios/icons/icon-50.png" width="50" height="50" />
+        <icon src="resources/ios/icons/icon-50@2x.png" width="100" height="100" />
+        <icon src="resources/ios/icons/icon-60@2x.png" width="120" height="120" />
+        <icon src="resources/ios/icons/icon-60@3x.png" width="180" height="180" />
+        <icon src="resources/ios/icons/icon-72.png" width="72" height="72" />
+        <icon src="resources/ios/icons/icon-72@2x.png" width="144" height="144" />
+        <icon src="resources/ios/icons/icon-76.png" width="76" height="76" />
+        <icon src="resources/ios/icons/icon-76@2x.png" width="152" height="152" />
+        <icon src="resources/ios/icons/icon-83.5@2x.png" width="167" height="167" />
+        <icon src="resources/ios/icons/icon-86@2x.png" width="172" height="172" />
+        <icon src="resources/ios/icons/icon-98@2x.png" width="196" height="196" />
+        <icon src="resources/ios/icons/icon-1024.png" width="1024" height="1024" />
+
+        <preference name="scheme" value="app" />
+        <preference name="hostname" value="localhost" />
+    </platform>
+
+    <!-- electron, https://github.com/apache/cordova-electron/blob/master/DOCUMENTATION.md -->
+    <platform name="electron">
+        <preference name="ElectronSettingsFilePath" value="resources/electron/settings.json" />
+
+        <icon target="app" src="resources/electron/icons/icon.png" />
+        <icon target="installer" src="resources/electron/icons/icon.png" />
+    </platform>
+
+    <!-- whitelist -->
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>

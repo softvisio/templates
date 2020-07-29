@@ -1,0 +1,5 @@
+# https://www.electron.build/configuration/configuration#configuration
+
+extraResources:
+  - from: ./resources/extra
+    to: extra

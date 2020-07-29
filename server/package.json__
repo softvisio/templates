@@ -1,0 +1,20 @@
+{
+    "name": "",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "lint": "softvisio-cli lint"
+    },
+    "dependencies": {
+        "@softvisio/core": ">=0.17.0",
+        "argon2": ">=0.26.2",
+        "uws": "git+https://bitbucket.org/softvisio/uws.git#master"
+    },
+    "lint": [
+        "*.*",
+        "bin/**",
+        "contrib/**",
+        "lib/**",
+        "resources/**"
+    ]
+}

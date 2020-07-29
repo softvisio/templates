@@ -1,0 +1,35 @@
+{
+    "name": "",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "build": "env VUE_APP_BUILD_CORDOVA= vue-cli-service build --mode=production",
+        "build-cordova": "env VUE_APP_BUILD_CORDOVA=1 vue-cli-service build --mode=production",
+        "build-cordova-devel": "env VUE_APP_BUILD_CORDOVA=1 vue-cli-service build --mode=development",
+        "lint": "softvisio-cli lint",
+        "serve": "vue-cli-service serve"
+    },
+    "devDependencies": {
+        "@babel/core": ">=7.10.4",
+        "@fortawesome/fontawesome-free": ">=5.13.1",
+        "@softvisio/core": ">=0.23.0",
+        "@softvisio/ext": "git+https://bitbucket.org/softvisio/softvisio-ext.git#latest",
+        "@softvisio/vue": ">=0.14.0",
+        "@softvisio/vue-ext": ">=0.11.0",
+        "@vue/babel-preset-app": ">=4.4.6",
+        "@vue/cli-plugin-babel": ">=4.4.6",
+        "@vue/cli-service": ">=4.4.6",
+        "vue": ">=2.6.11",
+        "vue-cli-plugin-webpack-bundle-analyzer": ">=2.0.0",
+        "vue-template-compiler": ">=2.6.11",
+        "vuex": ">=3.5.1",
+        "webpack-bundle-analyzer": ">=3.8.0",
+        "worker-loader": ">=2.0.0"
+    },
+    "lint": [
+        "*.*",
+        "public/**",
+        "resources/**",
+        "src/**"
+    ]
+}

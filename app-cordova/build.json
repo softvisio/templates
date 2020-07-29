@@ -1,0 +1,35 @@
+{
+    "android": {
+        "release": {
+            "alias": "zdm@softvisio.net",
+            "keystore": "s:/cordova/android/zdm@softvisio.net.pkcs12",
+            "keystoreType": "pkcs12",
+            "password": "123456",
+            "storePassword": "123456"
+        }
+    },
+    "electron": {
+        "windows": {
+            "arch": [
+                "x64"
+            ],
+            "package": [
+                "nsis"
+            ]
+        }
+    },
+    "ios": {
+        "debug": {
+            "automaticProvisioning": true,
+            "codeSignIdentity": "iPhone Developer",
+            "developmentTeam": "",
+            "packageType": "development"
+        },
+        "release": {
+            "automaticProvisioning": true,
+            "codeSignIdentity": "iPhone Developer",
+            "developmentTeam": "",
+            "packageType": "app-store"
+        }
+    }
+}
