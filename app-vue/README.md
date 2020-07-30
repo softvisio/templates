@@ -71,27 +71,33 @@ This project template provides `session` store that implements interface to the 
 -   isAuthenticated - `boolean`, session is authenticated.
 
     ```
-    this.$store.getters["session/isAuthenticated"]
+    const isAuthenticated = this.$store.getters["session/isAuthenticated"]
     ```
 
 -   userId - `null` or `number`. If session is authenticated - returns authenticated user id.
 
     ```
-    this.$store.getters["session/userId"]
+    const userId = this.$store.getters["session/userId"]
     ```
 
 -   username - `null` or `string`. If session is authenticated - returns authenticated user name.
 
     ```
-    this.$store.getters["session/username"]
+    const username = this.$store.getters["session/username"]
     ```
 
 -   avatar - `null` or `string`. If session is authenticated - returns authenticated user avatar url.
 
     ```
-    this.$store.getters["session/avatar"]
+    const avatarUrl = this.$store.getters["session/avatar"]
     ```
 
-### MUTATION
+-   hasPermissions( permissions ) - `boolean`. Checks, if current user has permissions. `permisisons` argument is `Array` of `strings`. Returns `true` if user has one of enumerated permissions.
+
+    ```
+    const userIsAdmin = this.$store.getters["session/hasPermissions", ["admin"]]
+    ```
+
+### MUTATIONS
 
 ### ACTIONS
