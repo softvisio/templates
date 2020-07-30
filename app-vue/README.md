@@ -1,5 +1,3 @@
-[TOC]
-
 # SETUP DEVELOPMENT ENVIRONMENT
 
 1. Clone templates and use `app-vue` subdirectory as template for the new project:
