@@ -6,11 +6,11 @@
     git clone https://bitbucket.org/softvisio/templates.git
     ```
 
-    Remove trailing "\_\_" from the `package.json__` and `.gitignore__` files.
+    - Remove trailing "\_\_" from the `package.json__` and `.gitignore__` files.
 
-    Set package `name` in `package.json`.
+    - Set package `name` in `package.json`.
 
-    Edit `.env` and `.env.development`, set `VUE_APP_TITLE` and `VUE_APP_API_URL` variables.
+    - Edit `.env` and `.env.development` files, set `VUE_APP_TITLE` and `VUE_APP_API_URL` variables.
 
 2. Install `@softvisio/cli` globally:
 
