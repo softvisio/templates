@@ -68,31 +68,31 @@ This project template provides `session` store that implements interface to the 
 
 ### GETTERS
 
--   isAuthenticated - `boolean`, session is authenticated.
+-   **isAuthenticated** - `boolean`, session is authenticated.
 
     ```
     const isAuthenticated = this.$store.getters["session/isAuthenticated"]
     ```
 
--   userId - `null` or `number`. If session is authenticated - returns authenticated user id.
+-   **userId** - `null` or `number`. If session is authenticated - returns authenticated user id.
 
     ```
     const userId = this.$store.getters["session/userId"]
     ```
 
--   username - `null` or `string`. If session is authenticated - returns authenticated user name.
+-   **username** - `null` or `string`. If session is authenticated - returns authenticated user name.
 
     ```
     const username = this.$store.getters["session/username"]
     ```
 
--   avatar - `null` or `string`. If session is authenticated - returns authenticated user avatar url.
+-   **avatar** - `null` or `string`. If session is authenticated - returns authenticated user avatar url.
 
     ```
     const avatarUrl = this.$store.getters["session/avatar"]
     ```
 
--   hasPermissions( permissions ) - `boolean`. Checks, if current user has permissions. `permisisons` argument is `Array` of `strings`. Returns `true` if user has one of enumerated permissions.
+-   **hasPermissions( permissions )** - `boolean`. Checks, if current user has permissions. `permisisons` argument is `Array` of `strings`. Returns `true` if user has one of enumerated permissions.
 
     ```
     const userIsAdmin = this.$store.getters["session/hasPermissions", ["admin"]]
@@ -100,7 +100,7 @@ This project template provides `session` store that implements interface to the 
 
 ### ACTIONS
 
--   signin( credentials ) - `Result`. Tries to sign in user using username and password. Returns instance of `Result`.
+-   **signin( credentials )** - `Result`. Tries to sign in user using username and password. Returns instance of `Result`.
 
     ```
     const res = await this.$store.dispatch( "session/signin", { "username": "test", "password": "123" } );
@@ -119,25 +119,25 @@ This project template provides `session` store that implements interface to the 
     }
     ```
 
--   signout - `Result`. Sign out current user. Removes session token on backend and from API local storage. Returns instance of `Result`.
+-   **signout** - `Result`. Sign out current user. Removes session token on backend and from API local storage. Returns instance of `Result`.
 
     ```
     const res = await this.$store.dispatch( "session/signout" );
     ```
 
--   changePassword( password ) - `Result`. Set new password for the currently authenticated user.
+-   **changePassword( password )** - `Result`. Set new password for the currently authenticated user.
 
     ```
     const res = await this.$store.dispatch( "session/changePassword", "new-password" );
     ```
 
--   sendPasswordResetEmail( username ) - `Result`. Send password reset email to the user email. `username` can be user name or user email.
+-   **sendPasswordResetEmail( username )** - `Result`. Send password reset email to the user email. `username` can be user name or user email.
 
     ```
     const res = await this.$store.dispatch( "session/sendPasswordResetEmail", "username" );
     ```
 
--   setPasswordByToken( object ) - `Result`. Set user password, using password reset token from password reset email.
+-   **setPasswordByToken( object )** - `Result`. Set user password, using password reset token from password reset email.
 
     ```
     const res = await this.$store.dispatch( "session/setPasswordByToken", { "token": "password-reset-token", "password": "new-password" } );
