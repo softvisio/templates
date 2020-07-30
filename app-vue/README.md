@@ -32,4 +32,4 @@
 
 -   Commands `npm run serve` and `npm run build` should build project without errors.
 
--   All dependencies should be added as development dependencies.
+-   All dependencies should be added as **development** dependencies.
