@@ -125,10 +125,10 @@ This project template provides `session` store that implements interface to the 
     const res = await this.$store.dispatch( "session/signout" );
     ```
 
--   **changePassword( password )** - `Result`. Set new password for the currently authenticated user.
+-   **setPassword( password )** - `Result`. Set new password for the currently authenticated user.
 
     ```
-    const res = await this.$store.dispatch( "session/changePassword", "new-password" );
+    const res = await this.$store.dispatch( "session/setPassword", "new-password" );
     ```
 
 -   **sendPasswordResetEmail( username )** - `Result`. Send password reset email to the user email. `username` can be user name or user email.
