@@ -59,7 +59,7 @@ For particular project API refer to the project backend documentation.
 `Vuex` store instance is accesible from the views methods as `this.$store` property. Example:
 
 ```
-var res = await this.$store.dispatch( "session/signout" );
+const res = await this.$store.dispatch( "session/signout" );
 ```
 
 ## API SESSION STORE
@@ -98,6 +98,47 @@ This project template provides `session` store that implements interface to the 
     const userIsAdmin = this.$store.getters["session/hasPermissions", ["admin"]]
     ```
 
-### MUTATIONS
-
 ### ACTIONS
+
+-   signin( credentials ) - `Result`. Tries to sign in user using username and password. Returns instance of `Result`.
+
+    ```
+    const res = await this.$store.dispatch( "session/signin", { "username": "test", "password": "123" } );
+
+    if ( res.ok ) {
+        // credentials are valid, user signed in
+    }
+    else if ( res.status === 401 ) {
+        // credentils are invalid or user not found or user is disabled
+    }
+    else if ( res.status === 403 ) {
+        // credentials are valid, but user is not authorized to access this area
+    }
+    else {
+        // bad API response or connection problems, refer to the res.reason for more information
+    }
+    ```
+
+-   signout - `Result`. Sign out current user. Removes session token on backend and from API local storage. Returns instance of `Result`.
+
+    ```
+    const res = await this.$store.dispatch( "session/signout" );
+    ```
+
+-   changePassword( password ) - `Result`. Set new password for the currently authenticated user.
+
+    ```
+    const res = await this.$store.dispatch( "session/changePassword", "new-password" );
+    ```
+
+-   sendPasswordResetEmail( username ) - `Result`. Send password reset email to the user email. `username` can be user name or user email.
+
+    ```
+    const res = await this.$store.dispatch( "session/sendPasswordResetEmail", "username" );
+    ```
+
+-   setPasswordByToken( object ) - `Result`. Set user password, using password reset token from password reset email.
+
+    ```
+    const res = await this.$store.dispatch( "session/setPasswordByToken", { "token": "password-reset-token", "password": "new-password" } );
+    ```
