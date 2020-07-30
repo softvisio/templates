@@ -36,7 +36,7 @@
 
 # API
 
-API class instance is accessible from views and stores as `this.$api` property. Example:
+API class instance is accessible from the views and the stores objects as `this.$api` property. Example:
 
 ```
 const res = await this.$api.call( "method/name", param1, param2, ... );
@@ -51,3 +51,47 @@ else {
     // res.status, res.reason contains response status code and error message
 }
 ```
+
+For particular project API refer to the project backend documentation.
+
+# VUEX STORE
+
+`Vuex` store instance is accesible from the views methods as `this.$store` property. Example:
+
+```
+var res = await this.$store.dispatch( "session/signout" );
+```
+
+## API SESSION STORE
+
+This project template provides `session` store that implements interface to the API session.
+
+### GETTERS
+
+-   isAuthenticated - `boolean`, session is authenticated.
+
+    ```
+    this.$store.getters["session/isAuthenticated"]
+    ```
+
+-   userId - `null` or `number`. If session is authenticated - returns authenticated user id.
+
+    ```
+    this.$store.getters["session/userId"]
+    ```
+
+-   username - `null` or `string`. If session is authenticated - returns authenticated user name.
+
+    ```
+    this.$store.getters["session/username"]
+    ```
+
+-   avatar - `null` or `string`. If session is authenticated - returns authenticated user avatar url.
+
+    ```
+    this.$store.getters["session/avatar"]
+    ```
+
+### MUTATION
+
+### ACTIONS
