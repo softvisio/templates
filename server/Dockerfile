@@ -20,4 +20,4 @@ RUN \
     && curl -fsSL https://bitbucket.org/softvisio/scripts/raw/master/env-build-node.sh | /bin/bash -s -- cleanup \
     \
     # clean npm cache
-    && rm -rf ~/.npm
+    && rm -rf ~/.npm-cache
