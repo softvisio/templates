@@ -33,3 +33,21 @@
 -   Commands `npm run serve` and `npm run build` should build project without errors.
 
 -   All dependencies should be added as **development** dependencies.
+
+# API
+
+API class instance is accessible from views and stores as `this.$api` property. Example:
+
+```
+const res = await this.$api.call( "method/name", param1, param2, ... );
+
+// request is successful
+if ( res.ok ) {
+    // res.data contains response data
+}
+
+// request failed
+else {
+    // res.status, res.reason contains response status code and error message
+}
+```
