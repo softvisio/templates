@@ -34,6 +34,8 @@
 
 -   All dependencies should be added as **development** dependencies.
 
+-   Always try to use `async` / `await` syntax, do not use callbacks or `Promise.then()` wherever it is possible. Your code should have linear structure.
+
 # API
 
 API class instance is accessible from the views and the stores objects as `this.$api` property. Example:
