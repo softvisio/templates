@@ -1,4 +1,6 @@
-module.exports = `
+const sql = require( "@softvisio/core/sql" );
+
+module.exports = sql`
 
 -- CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
