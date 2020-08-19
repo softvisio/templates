@@ -1,12 +1,12 @@
 const { mix } = require( "@softvisio/core/mixins" );
-const ApiKeys = require( "@softvisio/core/app/mixins/api-keys" );
+const ApiTokens = require( "@softvisio/core/app/mixins/api-tokens" );
 
-/** class: ApiKeys
- * summary: User api keys management.
+/** class: ApiTokens
+ * summary: User api access tokens management.
  * extends:
- *   - '@softvisio/core/app/mixins/api-keys#ApiKeys'
+ *   - '@softvisio/core/app/mixins/api-tokens#ApiTokens'
  */
-module.exports = class extends mix( ApiKeys ) {
+module.exports = class extends mix( ApiTokens ) {
     #app;
     #api;
     #dbh;
