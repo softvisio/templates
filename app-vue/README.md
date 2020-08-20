@@ -36,6 +36,28 @@
 
 -   Always try to use `async` / `await` syntax, do not use callbacks or `Promise.then()` wherever it is possible. Your code should have linear structure.
 
+-   All filenames should be in lower case with "-" instead of "\_". Example: `file-name.js`.
+
+-   Naming conventions:
+
+        - Class name should be in CamelCase:
+
+        ```
+        class ApiClass {}; // correct
+
+        class APIClass {}; // invalid
+        ```
+
+        - Functions, methods and variables should be in camelCase:
+
+        ```
+        var someVar = true;
+
+        function somFunction () {};
+        ```
+
+        - Properties names should be in camesCase.
+
 # API
 
 API class instance is accessible from the views and the stores objects as `this.$api` property. Example:
