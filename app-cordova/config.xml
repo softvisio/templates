@@ -3,9 +3,7 @@
 <!-- reference, https://cordova.apache.org/docs/en/latest/config_ref/ -->
 <widget id="com.domain.name" version="0.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>App Name</name>
-    <description>
-        App description.
-    </description>
+    <description>App description.</description>
     <author email="zdm@softvisio.net" href="http://softvisio.net">softvisio.net</author>
     <content src="index.html" />
 
