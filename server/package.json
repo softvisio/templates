@@ -6,8 +6,8 @@
         "lint": "softvisio-cli lint"
     },
     "dependencies": {
-        "@softvisio/core": ">=0.45.3",
-        "argon2": ">=0.26.2",
+        "@softvisio/core": ">=0.66.0",
+        "argon2": ">=0.27.0",
         "uws": "git+https://bitbucket.org/softvisio/uws.git#latest"
     },
     "lint": [
