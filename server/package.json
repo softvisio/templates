@@ -8,7 +8,7 @@
     "dependencies": {
         "@softvisio/core": ">=0.45.3",
         "argon2": ">=0.26.2",
-        "uws": "git+https://bitbucket.org/softvisio/uws.git#master"
+        "uws": "git+https://bitbucket.org/softvisio/uws.git#latest"
     },
     "lint": [
         "*.*",
