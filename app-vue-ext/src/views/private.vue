@@ -1,14 +1,14 @@
 <template>
     <ext-panel fullscreen="true" layout="fit" scrollable="true">
-        <ext-titlebar docked="top" titleAlign="left" shadow="true" :title="title" margin="0 0 1 0">
-            <ext-image :src="avatar" align="right" cls="titlebar-avatar"/>
+        <ext-titlebar docked="top" titleAlign="left" shadow="true" :title="title" margin="0 0 1 0" padding="0 0 0 10">
+            <ext-image :src="avatar" align="right" width="32" height="32"/>
             <ext-button align="right" iconCls="fas fa-bars" margin="0 0 0 5" @tap="showMenu"/>
-        </ext-titlebar>
 
-        <MenuSheet ref="menu">
-            <ext-button iconCls="fas fa-cog" text="Settings" textAlign="left" :hidden="!isAdmin" @tap="showSettings"/>
-            <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsers"/>
-        </MenuSheet>
+            <MenuSheet ref="menu">
+                <ext-button iconCls="fas fa-cog" text="Settings" textAlign="left" :hidden="!isAdmin" @tap="showSettings"/>
+                <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsers"/>
+            </MenuSheet>
+        </ext-titlebar>
     </ext-panel>
 </template>
 
@@ -60,16 +60,3 @@ export default {
     },
 };
 </script>
-
-<style>
-    .titlebar-avatar {
-        margin: 0 5 0 5;
-        width: 32px;
-        height: 32px;
-    }
-
-    .username {
-        color: white;
-        font-size: 1.3em;
-    }
-</style>
