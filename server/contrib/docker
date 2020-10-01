@@ -22,6 +22,7 @@ export DOCKER_CONTAINER_ARGS="
     -v $SCRIPT_DIR:/var/local/dist/data \
     -v /var/run/nginx:/var/run/nginx \
     --net=host \
+    --init \
     --shm-size=1g \
 "
 
