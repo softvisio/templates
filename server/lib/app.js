@@ -4,7 +4,7 @@ const sql = require( "@softvisio/core/sql" );
 const result = require( "@softvisio/core/result" );
 
 module.exports = class extends App {
-    dbh;
+    #dbh;
 
     static cli () {
         return {
@@ -15,6 +15,10 @@ module.exports = class extends App {
 
     constructor ( options = {} ) {
         super( options );
+    }
+
+    get dbh () {
+        return this.#dbh;
     }
 
     async run () {
@@ -33,7 +37,7 @@ module.exports = class extends App {
         } );
 
         // create dbh
-        const dbh = ( this.dbh = sql.connect( process.env.APP_DB ) );
+        const dbh = ( this.#dbh = sql.connect( process.env.APP_DB ) );
 
         // create api endpoint
         this.api = new ( getApiClass( dbh ) )( this, dbh );
