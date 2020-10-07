@@ -1,4 +1,5 @@
 const { mix } = require( "@softvisio/core/mixins" );
+const Base = require( "@softvisio/core/app/api/base" );
 const Profile = require( "@softvisio/core/app/mixins/profile" );
 
 /** class: Profile
@@ -6,16 +7,4 @@ const Profile = require( "@softvisio/core/app/mixins/profile" );
  * extends:
  *   - '@softvisio/core/app/mixins/profile#Profile'
  */
-module.exports = class extends mix( Profile ) {
-    #app;
-    #api;
-    #dbh;
-
-    constructor ( app, api, options = {} ) {
-        super( app, api, options );
-
-        this.#app = app;
-        this.#api = api;
-        this.#dbh = options.dbh;
-    }
-};
+module.exports = class extends mix( Profile, Base ) {};

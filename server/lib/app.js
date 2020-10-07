@@ -18,6 +18,10 @@ module.exports = class extends App {
         super( options );
     }
 
+    get dbh () {
+        return this.#dbh;
+    }
+
     async run () {
 
         // signal handlers
@@ -44,7 +48,7 @@ module.exports = class extends App {
         if ( !res.ok ) return res;
 
         // load api methods
-        res = await this.#api.loadMethods( __dirname + "/api", { dbh } );
+        res = await this.#api.loadMethods( __dirname + "/api" );
         if ( !res.ok ) return res;
 
         // migrate dbh

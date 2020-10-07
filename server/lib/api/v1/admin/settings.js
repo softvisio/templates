@@ -1,4 +1,5 @@
 const { mix } = require( "@softvisio/core/mixins" );
+const Base = require( "@softvisio/core/app/api/base" );
 const Settings = require( "@softvisio/core/app/mixins/admin/settings" );
 
 /** class: Settings
@@ -6,16 +7,4 @@ const Settings = require( "@softvisio/core/app/mixins/admin/settings" );
  * extends:
  *   - '@softvisio/core/app/mixins/admin/settings#Settings'
  */
-module.exports = class extends mix( Settings ) {
-    #app;
-    #api;
-    #dbh;
-
-    constructor ( app, api, options = {} ) {
-        super( app, api, options );
-
-        this.#app = app;
-        this.#api = api;
-        this.#dbh = options.dbh;
-    }
-};
+module.exports = class extends mix( Settings, Base ) {};

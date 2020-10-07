@@ -1,18 +1,11 @@
+const Base = require( "@softvisio/core/app/api/base" );
+
 /** class: Test
  * summary: Test.
  * permissions:
  *   - '*'
  */
-module.exports = class {
-    #app;
-    #api;
-    #dbh;
-
-    constructor ( app, api, options = {} ) {
-        this.#app = app;
-        this.#api = api;
-        this.#dbh = options.dbh;
-    }
+module.exports = class extends Base() {
 
     /** method: API_test
      * summary: Test method.
