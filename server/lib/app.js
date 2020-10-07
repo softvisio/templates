@@ -18,14 +18,6 @@ module.exports = class extends App {
         super( options );
     }
 
-    get dbh () {
-        return this.#dbh;
-    }
-
-    get api () {
-        return this.#api;
-    }
-
     async run () {
 
         // signal handlers
