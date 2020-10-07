@@ -5,6 +5,7 @@ const result = require( "@softvisio/core/result" );
 
 module.exports = class extends App {
     #dbh;
+    #api;
 
     static cli () {
         return {
@@ -19,6 +20,10 @@ module.exports = class extends App {
 
     get dbh () {
         return this.#dbh;
+    }
+
+    get api () {
+        return this.#api;
     }
 
     async run () {
@@ -40,14 +45,14 @@ module.exports = class extends App {
         const dbh = ( this.#dbh = sql.connect( process.env.APP_DB ) );
 
         // create api endpoint
-        this.api = new ( getApiClass( dbh ) )( this, dbh );
+        this.#api = new ( getApiClass( dbh ) )( this, dbh );
 
         // init api
-        var res = await this.api.init();
+        var res = await this.#api.init();
         if ( !res.ok ) return res;
 
         // load api methods
-        res = await this.api.loadMethods( __dirname + "/api", { dbh } );
+        res = await this.#api.loadMethods( __dirname + "/api", { dbh } );
         if ( !res.ok ) return res;
 
         // migrate dbh
@@ -59,7 +64,7 @@ module.exports = class extends App {
 
         // load app settings
         process.stdout.write( "Loading app settings ... " );
-        res = await this.api.loadAppSettings();
+        res = await this.#api.loadAppSettings();
         console.log( res + "" );
         if ( !res.ok ) process.exit( 1 );
 
@@ -69,14 +74,14 @@ module.exports = class extends App {
             "worker": {
                 "num": 1,
                 "filename": __dirname + "/threads/worker",
-                "constructor": [this.api.getAppSettings()],
+                "constructor": [this.#api.getAppSettings()],
             },
         } );
         console.log( res + "" );
         if ( !res.ok ) process.exit( 1 );
 
         // create server locations
-        this.server.webpack( "/", __dirname + "/../app/www" ).api( "/api", this.api );
+        this.server.webpack( "/", __dirname + "/../app/www" ).api( "/api", this.#api );
 
         // run server
         this._listen();
