@@ -14,10 +14,6 @@ module.exports = class extends App {
         };
     }
 
-    constructor ( options = {} ) {
-        super( options );
-    }
-
     get dbh () {
         return this.#dbh;
     }
