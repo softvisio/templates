@@ -38,10 +38,10 @@ module.exports = class extends App {
         } );
 
         // create dbh
-        const dbh = ( this.#dbh = sql.connect( process.env.APP_DB ) );
+        this.#dbh = sql.connect( process.env.APP_DB );
 
         // create api endpoint
-        this.#api = new ( getApiClass( dbh ) )( this, dbh );
+        this.#api = new ( getApiClass( this.#dbh ) )( this, this.#dbh );
 
         // init api
         var res = await this.#api.init();
@@ -53,8 +53,8 @@ module.exports = class extends App {
 
         // migrate dbh
         process.stdout.write( "Migrating DB schema ... " );
-        await dbh.loadSchema( __dirname + "/db" );
-        res = await dbh.migrate();
+        await this.#dbh.loadSchema( __dirname + "/db" );
+        res = await this.#dbh.migrate();
         console.log( res + "" );
         if ( !res.ok ) process.exit( 1 );
 
