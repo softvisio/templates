@@ -1,5 +1,5 @@
 const { mix } = require( "@softvisio/core/mixins" );
-const Base = require( "@softvisio/core/app/api/base" );
+const Base = require( "@softvisio/core/app/mixins/base" );
 const Users = require( "@softvisio/core/app/mixins/admin/users" );
 
 /** class: Users

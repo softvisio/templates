@@ -1,4 +1,4 @@
-const Base = require( "@softvisio/core/app/api/base" );
+const Base = require( "@softvisio/core/app/mixins/base" );
 
 /** class: Test
  * summary: Test.
