@@ -5,6 +5,6 @@ const Profile = require( "@softvisio/core/app/mixins/profile" );
 /** class: Profile
  * summary: User profile.
  * extends:
- *   - "@softvisio/core/app/mixins/profile#Profile"
+ *   - '@softvisio/core/app/mixins/profile#Profile'
  */
 module.exports = class extends mix( Profile, Base ) {};

@@ -5,6 +5,6 @@ const ApiTokens = require( "@softvisio/core/app/mixins/api-tokens" );
 /** class: ApiTokens
  * summary: User api access tokens management.
  * extends:
- *   - "@softvisio/core/app/mixins/api-tokens#ApiTokens"
+ *   - '@softvisio/core/app/mixins/api-tokens#ApiTokens'
  */
 module.exports = class extends mix( ApiTokens, Base ) {};

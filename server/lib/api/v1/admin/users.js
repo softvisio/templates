@@ -5,6 +5,6 @@ const Users = require( "@softvisio/core/app/mixins/admin/users" );
 /** class: Users
  * summary: App users.
  * extends:
- *   - "@softvisio/core/app/mixins/admin/users#Users"
+ *   - '@softvisio/core/app/mixins/admin/users#Users'
  */
 module.exports = class extends mix( Users, Base ) {};
