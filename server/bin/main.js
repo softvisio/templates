@@ -4,11 +4,7 @@ const App = require( "../lib/app" );
 
 App.runCli();
 
-App.loadEnv( process.cli.options.devel );
-
-const app = new App( {
-    "devel": process.cli.options.devel,
-} );
+const app = new App();
 
 app.run().then( res => {
     if ( !res.ok ) process.exit( 1 );
