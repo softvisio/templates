@@ -8,7 +8,11 @@ module.exports = class {
 
         global.host.on( "app/settings-updated", this._onAppSettingsUpdated.bind( this ) );
 
-        this._init();
+        this._init( appSettings );
+    }
+
+    get dbh () {
+        return this.#dbh;
     }
 
     async _init ( appSettings ) {
