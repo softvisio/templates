@@ -59,7 +59,7 @@ module.exports = class extends App {
         console.log( res + "" );
         if ( !res.ok ) return res;
 
-        // create server locations
+        // create HTTP server locations
         this.server.webpack( "/", __dirname + "/../app/www" ).api( "/api", this.#api );
 
         // run HTTP server
