@@ -40,25 +40,12 @@ module.exports = class extends App {
         this.#api = new ( getApiClass( this.#dbh ) )( this, this.#dbh );
 
         // init api
-        var res = await this.#api.init();
+        var res = await this.#api.init( { "schema": __dirname + "/db" } );
         if ( !res.ok ) return res;
 
         // load api methods
         res = await this.#api.loadMethods( __dirname + "/api" );
         if ( !res.ok ) return res;
-
-        // migrate dbh
-        process.stdout.write( "Migrating DB schema ... " );
-        await this.#dbh.loadSchema( __dirname + "/db" );
-        res = await this.#dbh.migrate();
-        console.log( res + "" );
-        if ( !res.ok ) process.exit( 1 );
-
-        // load app settings
-        process.stdout.write( "Loading app settings ... " );
-        res = await this.#api.loadAppSettings();
-        console.log( res + "" );
-        if ( !res.ok ) process.exit( 1 );
 
         // run threads
         process.stdout.write( "Starting threads ... " );
@@ -70,13 +57,14 @@ module.exports = class extends App {
             },
         } );
         console.log( res + "" );
-        if ( !res.ok ) process.exit( 1 );
+        if ( !res.ok ) return res;
 
         // create server locations
         this.server.webpack( "/", __dirname + "/../app/www" ).api( "/api", this.#api );
 
-        // run server
-        this._listen();
+        // run HTTP server
+        res = this._listen();
+        if ( !res.ok ) return res;
 
         return result( 200 );
     }
