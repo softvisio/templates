@@ -40,11 +40,7 @@ module.exports = class extends App {
         this.#api = new ( getApiClass( this.#dbh ) )( this, this.#dbh );
 
         // init api
-        var res = await this.#api.init( { "schema": __dirname + "/db" } );
-        if ( !res.ok ) return res;
-
-        // load api methods
-        res = await this.#api.loadMethods( __dirname + "/api" );
+        var res = await this.#api.init( { "schema": __dirname + "/db", "methods": __dirname + "/api" } );
         if ( !res.ok ) return res;
 
         // run threads
