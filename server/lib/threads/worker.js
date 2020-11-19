@@ -1,4 +1,5 @@
 const sql = require( "@softvisio/core/sql" );
+const result = require( "@softvisio/core/result" );
 
 module.exports = class {
     #dbh;
@@ -22,6 +23,6 @@ module.exports = class {
     _onAppSettingsUpdated ( data ) {}
 
     async RPC_test () {
-        return 200;
+        return result( 200 );
     }
 };
