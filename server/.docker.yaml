@@ -1,1 +1,6 @@
 registry:
+
+auto_tags:
+  - master
+  - devel
+  - latest
