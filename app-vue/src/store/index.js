@@ -1,25 +1,9 @@
-import Store from "#softvisio/store";
+import Store from "#softvisio/store/main";
 
 // import CONST from "@/const";
 
 export default class extends Store {
-    state () {
-        return {};
-    }
-
-    getters () {
-        return {};
-    }
-
-    mutations () {
-        return {};
-    }
-
-    actions () {
-        return {};
-    }
-
-    modules () {
-        return {};
+    get MODULES () {
+        return super.MODULES;
     }
 }
