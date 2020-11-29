@@ -15,7 +15,7 @@
 <script>
 import CONST from "@/const";
 import MenuSheet from "#softvisio/components/menu-sheet";
-import SettingsDialog from "#softvisio/components/settings/dialog";
+import SettingsDialog from "./private/settings/dialog";
 import UsersDialog from "#softvisio/components/users/dialog";
 
 export default {
