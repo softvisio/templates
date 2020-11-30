@@ -29,7 +29,7 @@ export default {
 
     "computed": {
         avatar () {
-            return this.$store.getters["session/avatar"];
+            return this.$store.state.session.avatar;
         },
 
         isAdmin () {
