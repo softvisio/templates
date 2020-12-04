@@ -1,7 +1,7 @@
 <template>
     <ext-panel fullscreen="true" layout="fit" scrollable="true">
-        <ext-titlebar docked="top" titleAlign="left" shadow="true" :title="title" margin="0 0 1 0" padding="0 0 0 10">
-            <ext-image :src="avatar" align="right" width="32" height="32"/>
+        <ext-titlebar docked="top" titleAlign="left" :title="title" margin="0 0 1 0" padding="0 0 0 10">
+            <Avatar align="right"/>
             <ext-button align="right" iconCls="fas fa-bars" margin="0 0 0 5" @tap="showMenu"/>
 
             <MenuSheet ref="menu">
@@ -14,12 +14,13 @@
 
 <script>
 import CONST from "@/const";
-import MenuSheet from "#softvisio/components/menu-sheet";
+import Avatar from "#softvisio/components/menu/avatar";
+import MenuSheet from "#softvisio/components/menu/sheet";
 import SettingsDialog from "./private/settings/dialog";
 import UsersDialog from "#softvisio/components/users/dialog";
 
 export default {
-    "components": { MenuSheet },
+    "components": { Avatar, MenuSheet },
 
     data () {
         return {
@@ -28,10 +29,6 @@ export default {
     },
 
     "computed": {
-        avatar () {
-            return this.$store.state.session.avatar;
-        },
-
         isAdmin () {
             return this.$store.getters["session/hasPermissions"]( CONST.PERMS_ADMIN );
         },
