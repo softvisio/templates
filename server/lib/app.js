@@ -1,7 +1,6 @@
 const App = require( "@softvisio/core/app" );
 const getApiClass = require( "@softvisio/core/app/api" );
 const sql = require( "@softvisio/core/sql" );
-const result = require( "@softvisio/core/result" );
 
 module.exports = class extends App {
     #dbh;

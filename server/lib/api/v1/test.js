@@ -1,5 +1,4 @@
 const Base = require( "@softvisio/core/app/mixins/base" );
-const result = require( "@softvisio/core/result" );
 
 /** class: Test
  * summary: Test.

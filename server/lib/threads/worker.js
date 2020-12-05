@@ -1,5 +1,4 @@
 const sql = require( "@softvisio/core/sql" );
-const result = require( "@softvisio/core/result" );
 
 module.exports = class {
     #dbh;
