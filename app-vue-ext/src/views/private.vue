@@ -31,7 +31,7 @@ export default {
 
     "computed": {
         isAdmin () {
-            return this.$store.getters["session/hasPermissions"]( CONST.PERMS_ADMIN );
+            return this.$store.session.hasPermissions( CONST.PERMS_ADMIN );
         },
     },
 

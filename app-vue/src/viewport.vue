@@ -18,7 +18,7 @@ export default {
         onAuthChange () {},
 
         async signin ( username, password ) {
-            var res = await this.$store.dispatch( "session/signin", { username, password } );
+            var res = await this.$store.session.signin( { username, password } );
 
             if ( !res.ok ) {
                 alert( `Auth problem: ${res.toString()}` );
@@ -26,7 +26,7 @@ export default {
         },
 
         signout () {
-            this.$store.dispatch( "session/signout" );
+            this.$store.session.signout();
         },
     },
 };
