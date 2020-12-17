@@ -23,13 +23,11 @@ import CONST from "@/const";
 export default {
     "components": { Avatar, MenuSheet },
 
-    data () {
-        return {
-            "title": process.env.VUE_APP_TITLE,
-        };
-    },
-
     "computed": {
+        title () {
+            return this.$store.session.title;
+        },
+
         isAdmin () {
             return this.$store.session.hasPermissions( CONST.PERMS_ADMIN );
         },
