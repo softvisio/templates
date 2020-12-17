@@ -45,7 +45,7 @@ export default {
 
             if ( !this.settingsDialog ) this.settingsDialog = await Ext.Viewport.addVue( SettingsDialog );
 
-            this.settingsDialog.$ext.show();
+            this.settingsDialog.ext.show();
         },
 
         async showUsers () {
@@ -53,7 +53,7 @@ export default {
 
             if ( !this.usersDialog ) this.usersDialog = await Ext.Viewport.addVue( UsersDialog );
 
-            this.usersDialog.$ext.show();
+            this.usersDialog.ext.show();
         },
     },
 };
