@@ -2,7 +2,7 @@
     <ext-panel fullscreen="true" layout="fit" scrollable="true">
         <ext-titlebar docked="top" titleAlign="left" :title="title" margin="0 0 1 0" padding="0 0 0 10">
             <Avatar align="right"/>
-            <ext-button align="right" iconCls="fas fa-bars" margin="0 0 0 5" @tap="showMenu"/>
+            <ext-button align="right" iconCls="fas fa-bars" margin="0 0 0 5" ui="action" @tap="showMenu"/>
 
             <MenuSheet ref="menu">
                 <ext-button iconCls="fas fa-cog" text="Settings" textAlign="left" :hidden="!isAdmin" @tap="showSettings"/>
