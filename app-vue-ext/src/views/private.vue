@@ -5,8 +5,8 @@
             <ext-button align="right" iconCls="fas fa-bars" margin="0 0 0 5" ui="action" @tap="showMenu"/>
 
             <MenuSheet ref="menu">
-                <ext-button iconCls="fas fa-cog" text="Settings" textAlign="left" :hidden="!isAdmin" @tap="showSettings"/>
-                <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsers"/>
+                <ext-button iconCls="fas fa-cog" text="Settings" textAlign="left" :hidden="!isAdmin" @tap="showSettingsDialog"/>
+                <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
             </MenuSheet>
         </ext-titlebar>
     </ext-panel>
@@ -38,7 +38,7 @@ export default {
             this.$refs.menu.show();
         },
 
-        async showSettings () {
+        async showSettingsDialog () {
             this.$refs.menu.hide();
 
             if ( !this.settingsDialog ) this.settingsDialog = await Ext.Viewport.addVue( SettingsDialog );
@@ -46,7 +46,7 @@ export default {
             this.settingsDialog.ext.show();
         },
 
-        async showUsers () {
+        async showUsersDialog () {
             this.$refs.menu.hide();
 
             if ( !this.usersDialog ) this.usersDialog = await Ext.Viewport.addVue( UsersDialog );
