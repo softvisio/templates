@@ -18,7 +18,7 @@ import MenuSheet from "#softvisio/components/menu/sheet";
 import SettingsDialog from "./private/settings/dialog";
 import UsersDialog from "#softvisio/components/users/dialog";
 
-import CONST from "@/const";
+// import CONST from "@/const";
 
 export default {
     "components": { Avatar, MenuSheet },
@@ -29,7 +29,7 @@ export default {
         },
 
         isAdmin () {
-            return this.$store.session.hasPermissions( CONST.PERMISSIONS.ADMIN );
+            return this.$store.session.hasPermissions( "ADMIN" );
         },
     },
 
