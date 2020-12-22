@@ -1,9 +1,5 @@
 import { constants } from "@softvisio/core/util";
 
-const CONST = {
-    "PERMISSIONS": {
-        "admin": {},
-    },
-};
+const CONST = {};
 
 export default constants( CONST );
