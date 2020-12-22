@@ -29,7 +29,7 @@ export default {
         },
 
         isAdmin () {
-            return this.$store.session.hasPermissions( "ADMIN" );
+            return this.$store.session.hasPermissions( "admin" );
         },
     },
 
