@@ -2,6 +2,8 @@ const App = require( "@softvisio/core/app" );
 const getApiClass = require( "@softvisio/core/app/api" );
 const sql = require( "@softvisio/core/sql" );
 
+const CONST = require( "./const" );
+
 module.exports = class extends App {
     #dbh;
     #api;
@@ -11,6 +13,10 @@ module.exports = class extends App {
             "options": {},
             "arguments": {},
         };
+    }
+
+    get permissions () {
+        return CONST.PERMISSIONS;
     }
 
     get dbh () {
