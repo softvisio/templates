@@ -15,10 +15,6 @@ module.exports = class extends App {
         };
     }
 
-    get permissions () {
-        return CONST.PERMISSIONS;
-    }
-
     get dbh () {
         return this.#dbh;
     }
@@ -45,7 +41,11 @@ module.exports = class extends App {
         this.#api = new ( getApiClass( this.#dbh ) )( this, this.#dbh );
 
         // init api
-        var res = await this.#api.init( { "schema": __dirname + "/db", "methods": __dirname + "/api" } );
+        var res = await this.#api.init( {
+            "permissions": CONST.PERMISSIONS,
+            "schema": __dirname + "/db",
+            "methods": __dirname + "/api",
+        } );
         if ( !res.ok ) return res;
 
         // run threads
