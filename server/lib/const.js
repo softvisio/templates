@@ -5,6 +5,7 @@ const CONST = {
         "admin": {
             "name": "Administrator",
             "description": "System administrator",
+            "default": false,
         },
     },
 };
