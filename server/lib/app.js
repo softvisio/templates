@@ -1,5 +1,4 @@
 const App = require( "@softvisio/core/app" );
-const getApiClass = require( "@softvisio/core/app/api" );
 const sql = require( "@softvisio/core/sql" );
 
 const CONST = require( "./const" );
@@ -38,19 +37,15 @@ module.exports = class extends App {
         this.#dbh = sql.connect( process.env.APP_DB );
 
         // create api endpoint
-        this.#api = new ( getApiClass( this.#dbh ) )( this, this.#dbh );
-
-        // init api
-        var res = await this.#api.init( {
+        this.#api = await this._buildApi( this.#dbh, null, {
             "permissions": CONST.PERMISSIONS,
             "schema": __dirname + "/db",
             "methods": __dirname + "/api",
         } );
-        if ( !res.ok ) return res;
 
         // run threads
         process.stdout.write( "Starting threads ... " );
-        res = await this.threads.run( {
+        var res = await this.threads.run( {
             "worker": {
                 "num": 1,
                 "filename": __dirname + "/threads/worker",
