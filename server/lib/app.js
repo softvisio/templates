@@ -39,6 +39,7 @@ module.exports = class extends App {
         // create api endpoint
         this.#api = await this._buildApi( this.#dbh, {
             "permissions": CONST.PERMISSIONS,
+            "objectPermissions": CONST.OBJECT_PERMISSIONS,
             "schema": __dirname + "/db",
             "methods": __dirname + "/api",
         } );
