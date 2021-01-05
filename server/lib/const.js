@@ -8,7 +8,7 @@ const CONST = {
             "default": false,
         },
     },
-    "OBJECT_PERMISSIONS": {},
+    "OBJECTS": {},
 };
 
 module.exports = constants( CONST );
