@@ -49,7 +49,7 @@ module.exports = class extends App {
         var res = await this.threads.run( {
             "worker": {
                 "num": 1,
-                "filename": __dirname + "/threads/worker",
+                "path": __dirname + "/threads/worker",
                 "constructor": [this.#api.appSettings],
             },
         } );
