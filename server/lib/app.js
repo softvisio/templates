@@ -43,6 +43,7 @@ module.exports = class extends App {
             "schema": __dirname + "/db",
             "methods": __dirname + "/api",
         } );
+        if ( !this.#api ) return result( 500 );
 
         // run threads
         process.stdout.write( "Starting threads ... " );
