@@ -6,6 +6,8 @@ App.runCli();
 
 const app = new App();
 
-app.run().then( res => {
+( async () => {
+    const res = await app.run();
+
     if ( !res.ok ) process.exit( 1 );
-} );
+} )();
