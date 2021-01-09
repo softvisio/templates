@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": ">=5.15.1",
-        "@softvisio/core": ">=0.115.0",
+        "@softvisio/core": ">=0.115.1",
         "@softvisio/ext": "bitbucket:softvisio/softvisio-ext#latest",
         "@softvisio/vue": ">=0.39.1",
         "@softvisio/vue-ext": ">=0.46.0",

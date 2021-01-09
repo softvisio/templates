@@ -10,7 +10,7 @@
         "serve": "vue-cli-service serve"
     },
     "devDependencies": {
-        "@softvisio/core": ">=0.115.0",
+        "@softvisio/core": ">=0.115.1",
         "@softvisio/vue": ">=0.39.1",
         "@softvisio/vuex": ">=0.2.0",
         "@vue/cli-plugin-babel": ">=4.5.10",
