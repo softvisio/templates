@@ -5,6 +5,6 @@ const Session = require( "@softvisio/core/app/mixins/session" );
 /** class: Sesion
  * summary: Sesion.
  * extends:
- *   - '@softvisio/core/app/mixins/session#Session'
+ *   - "@softvisio/core/app/mixins/session#Session"
  */
 module.exports = class extends mix( Session, Base ) {};
