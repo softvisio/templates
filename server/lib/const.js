@@ -8,6 +8,7 @@ const CONST = {
             "default": false,
         },
     },
+
     "OBJECTS": {},
 };
 
