@@ -6,20 +6,20 @@ module.exports = class {
     constructor ( appSettings ) {
         this.#dbh = sql.connect( process.env.APP_DB );
 
-        global.host.on( "app/settings-updated", this._onAppSettingsUpdated.bind( this ) );
+        if ( global.host ) global.host.on( "app/settings-updated", this.#onAppSettingsUpdated.bind( this ) );
 
-        this._init( appSettings );
+        this.#init( appSettings );
     }
 
     get dbh () {
         return this.#dbh;
     }
 
-    async _init ( appSettings ) {
-        this._onAppSettingsUpdated( appSettings );
+    async #init ( appSettings ) {
+        this.#onAppSettingsUpdated( appSettings );
     }
 
-    _onAppSettingsUpdated ( data ) {}
+    #onAppSettingsUpdated ( data ) {}
 
     async RPC_test () {
         return result( 200 );
