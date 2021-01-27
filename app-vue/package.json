@@ -10,16 +10,10 @@
         "serve": "vue-cli-service serve"
     },
     "devDependencies": {
-        "@softvisio/core": ">=0.115.1",
-        "@softvisio/vue": ">=0.39.1",
-        "@softvisio/vuex": ">=0.2.0",
-        "@vue/cli-plugin-babel": ">=4.5.10",
-        "@vue/cli-service": ">=4.5.10",
-        "vue": ">=2.6.12",
-        "vue-cli-plugin-webpack-bundle-analyzer": ">=4.0.0",
-        "vue-template-compiler": ">=2.6.12",
-        "webpack-bundle-analyzer": ">=4.3.0",
-        "worker-loader": ">=3.0.7"
+        "@softvisio/vue": "^0.40.2",
+        "@vue/cli-plugin-babel": "^4.5.11",
+        "@vue/cli-service": "^4.5.11",
+        "vue-cli-plugin-webpack-bundle-analyzer": "^4.0.0"
     },
     "lint": [
         "*.*",
