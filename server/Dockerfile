@@ -6,12 +6,12 @@ RUN \
     \
     # install deps
     && pushd .. \
-    && npm i --unsafe --only=prod \
+    && npm i --no-fund --omit=dev \
     && popd \
     \
     # build app
     && pushd ../app \
-    && npm i --unsafe \
+    && npm i --no-fund \
     && npm run build \
     && rm -rf .[!.]* !(www) \
     && popd \
