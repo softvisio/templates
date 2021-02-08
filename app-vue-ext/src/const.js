@@ -1,4 +1,4 @@
-import { constants } from "@softvisio/core/util";
+import constants from "@softvisio/core/constants";
 
 const CONST = {};
 
