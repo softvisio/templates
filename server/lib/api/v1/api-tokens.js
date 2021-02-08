@@ -1,4 +1,4 @@
-const { mix } = require( "@softvisio/core/mixins" );
+const mixins = require( "@softvisio/core/mixins" );
 const Base = require( "@softvisio/core/app/mixins/base" );
 const ApiTokens = require( "@softvisio/core/app/mixins/api-tokens" );
 
@@ -7,4 +7,4 @@ const ApiTokens = require( "@softvisio/core/app/mixins/api-tokens" );
  * extends:
  *   - "@softvisio/core/app/mixins/api-tokens#ApiTokens"
  */
-module.exports = class extends mix( ApiTokens, Base ) {};
+module.exports = class extends mixins( ApiTokens, Base ) {};

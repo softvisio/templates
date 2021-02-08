@@ -1,4 +1,4 @@
-const { mix } = require( "@softvisio/core/mixins" );
+const mixins = require( "@softvisio/core/mixins" );
 const Base = require( "@softvisio/core/app/mixins/base" );
 const Session = require( "@softvisio/core/app/mixins/session" );
 
@@ -7,4 +7,4 @@ const Session = require( "@softvisio/core/app/mixins/session" );
  * extends:
  *   - "@softvisio/core/app/mixins/session#Session"
  */
-module.exports = class extends mix( Session, Base ) {};
+module.exports = class extends mixins( Session, Base ) {};
