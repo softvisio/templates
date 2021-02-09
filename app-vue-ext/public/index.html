@@ -12,7 +12,7 @@
 
         <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
 
-        <% if ( !!+process.env.VUE_APP_BUILD_CORDOVA || process.env.VUE_APP_BUILD_CORDOVA === "true" ) { %>
+        <% if ( process.env.VUE_APP_BUILD_CORDOVA ) { %>
         <script src="cordova.js" type="text/javascript" integrity="" crossorigin="anonymous"></script>
         <% } %>
     </head>
