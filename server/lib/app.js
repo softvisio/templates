@@ -37,7 +37,7 @@ module.exports = class extends App {
         this.#dbh = sql.connect( process.env.APP_DB );
 
         // create api endpoint
-        this.#api = await this._buildApi( this.#dbh, {
+        this.#api = await this.Api.new( this, this.#dbh, {
             "permissions": CONST.PERMISSIONS,
             "objects": CONST.OBJECTS,
             "schema": __dirname + "/db",
