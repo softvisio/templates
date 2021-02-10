@@ -1,3 +1,5 @@
-import create from "#softvisio";
+import createApp from "#softvisio";
 
-create();
+const app = createApp();
+
+app.mount( "#app" );
