@@ -4,11 +4,9 @@ import Viewport from "#softvisio/viewport";
 export default {
     "extends": Viewport,
 
-    "data": () => {
-        return {
-            "publicView": () => import( "@/views/public.vue" ),
-            "privateView": () => import( "@/views/private.vue" ),
-        };
+    created () {
+        this.publicView = () => import( "@/views/public.vue" );
+        this.privateView = () => import( "@/views/private.vue" );
     },
 
     "methods": {
