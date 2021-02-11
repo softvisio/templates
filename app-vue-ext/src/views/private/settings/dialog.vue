@@ -1,8 +1,10 @@
 <template>
     <SettingsDialog>
-        <!-- <ext&#45;fieldset slot="top" title="General Settings" defaults='{"labelAlign":"left","labelWidth":250}'> -->
-        <!--     <ext&#45;textfield label="Test Field" bind="{record.test_field}"/> -->
-        <!-- </ext&#45;fieldset> -->
+        <template #top>
+            <!-- <ext&#45;fieldset title="General Settings" defaults='{"labelAlign":"left","labelWidth":250}'> -->
+            <!--     <ext&#45;textfield label="Test Field" bind="{record.test_field}"/> -->
+            <!-- </ext&#45;fieldset> -->
+        </template>
     </SettingsDialog>
 </template>
 
