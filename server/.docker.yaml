@@ -1,4 +1,6 @@
-registry:
+registry: namespace/name
+
+default_tag: latest
 
 auto_tags:
   - master
