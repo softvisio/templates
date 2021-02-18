@@ -1,12 +1,13 @@
 <script>
 import Viewport from "#softvisio/viewport";
+import { defineAsyncComponent } from "vue";
 
 export default {
     "extends": Viewport,
 
     created () {
-        this.publicView = () => import( "@/views/public.vue" );
-        this.privateView = () => import( "@/views/private.vue" );
+        this.publicView = defineAsyncComponent( () => import( "@/views/public.vue" ) );
+        this.privateView = defineAsyncComponent( () => import( "@/views/private.vue" ) );
     },
 
     "methods": {

@@ -1,5 +1,5 @@
 <template>
-    <ext-panel fullscreen="true" layout="center">
+    <ext-panel layout="center">
         <AuthPanel reset signup shadow/>
     </ext-panel>
 </template>

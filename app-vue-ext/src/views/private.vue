@@ -1,5 +1,5 @@
 <template>
-    <ext-panel fullscreen="true" layout="fit" scrollable="true">
+    <ext-panel layout="fit" scrollable="true">
         <ext-titlebar docked="top" titleAlign="left" :title="title" margin="0 0 1 0" padding="0 0 0 10">
             <Avatar align="right"/>
             <ext-button align="right" iconCls="fas fa-bars" margin="0 0 0 5" ui="action" @tap="showMenu"/>
@@ -41,17 +41,17 @@ export default {
         async showSettingsDialog () {
             this.$refs.menu.hide();
 
-            if ( !this.settingsDialog ) this.settingsDialog = await Ext.Viewport.addVue( SettingsDialog );
+            const cmp = await this.$mount( SettingsDialog );
 
-            this.settingsDialog.ext.show();
+            cmp.ext.show();
         },
 
         async showUsersDialog () {
             this.$refs.menu.hide();
 
-            if ( !this.usersDialog ) this.usersDialog = await Ext.Viewport.addVue( UsersDialog );
+            const cmp = await this.$mount( UsersDialog );
 
-            this.usersDialog.ext.show();
+            cmp.ext.show();
         },
     },
 };

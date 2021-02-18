@@ -1,5 +1,3 @@
 import createApp from "#softvisio";
 
-const app = createApp();
-
-app.mount( "#app" );
+createApp().then( app => app.mount( "#app" ) );
