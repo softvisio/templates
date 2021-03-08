@@ -1,0 +1,53 @@
+#!/usr/bin/env -S docker stack deploy NAME --compose-file
+
+version: "3.9"
+
+# NOTE deploy
+# docker stack deploy --compose-file docker-compose.yaml NAME
+
+x-build:
+  default_tag: latest
+  auto_tags: [main, devel, latest]
+  # tags_mapping: { main: latest }
+
+networks:
+  private: { external: true }
+
+volumes:
+  maxmind: { external: true }
+
+configs:
+  .env.yaml: { file: data/.env.yaml }
+  .env.production.yaml: { file: data/.env.production.yaml }
+
+services:
+  NAME:
+    image: softvisio/NAME
+    hostname: NAME
+
+    deploy:
+      replicas: 1
+      placement:
+        max_replicas_per_node: 3
+
+    networks: [private]
+
+    volumes:
+      - { type: volume, source: maxmind, target: /var/lib/maxmind }
+
+    configs:
+      - { source: .env.yaml, target: /var/local/dist/data/.env.yaml }
+      - { source: .env.production.yaml, target: /var/local/dist/data/.env.production.yaml }
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1/api/ping"]
+      start_period: 1m
+      interval: 1m
+      timeout: 10s
+      retries: 3
+
+    init: true
+    stop_grace_period: 5m
+    shm_size: 1g
+
+    build: "true"
