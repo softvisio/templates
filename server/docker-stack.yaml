@@ -1,9 +1,9 @@
-#!/usr/bin/env -S docker stack deploy NAME --compose-file
+#!/usr/bin/env -S docker stack deploy NAME -c
 
 version: "3.9"
 
 # NOTE deploy
-# docker stack deploy --compose-file docker-stack.yaml NAME
+# docker stack deploy -c docker-stack.yaml NAME
 
 x-build:
   default_tag: latest
