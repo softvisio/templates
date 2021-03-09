@@ -3,7 +3,7 @@
 version: "3.9"
 
 # NOTE deploy
-# docker stack deploy --compose-file docker-compose.yaml NAME
+# docker stack deploy --compose-file docker-stack.yaml NAME
 
 x-build:
   default_tag: latest
