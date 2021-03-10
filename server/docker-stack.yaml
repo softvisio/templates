@@ -41,9 +41,6 @@ services:
       - { source: .env.yaml, target: /var/local/dist/data/.env.yaml }
       - { source: .env.production.yaml, target: /var/local/dist/data/.env.production.yaml }
 
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://127.0.0.1/api/ping"]
-
     init: true
     stop_grace_period: 5m
     shm_size: 1g
