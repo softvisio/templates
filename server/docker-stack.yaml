@@ -43,10 +43,6 @@ services:
 
     healthcheck:
       test: ["CMD", "curl", "-f", "http://127.0.0.1/api/ping"]
-      start_period: 1m
-      interval: 1m
-      timeout: 10s
-      retries: 3
 
     init: true
     stop_grace_period: 5m
