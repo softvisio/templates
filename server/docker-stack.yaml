@@ -15,8 +15,11 @@ services:
       placement:
         max_replicas_per_node: 3
       labels:
-        nginx-server-name: app.domain, api.domain, dev.domain
+        nginx.server-name: app.domain, api.domain, dev.domain
         nginx.client-max-body-size: 10m
+        nginx.cache: "true"
+        nginx.cache.max-size: 10g
+        nginx.cache.inactive: 1w
 
     configs:
       - { source: .env.yaml, target: /var/local/dist/data/.env.yaml }
