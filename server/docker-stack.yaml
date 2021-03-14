@@ -8,7 +8,6 @@ version: "3.9"
 services:
   NAME:
     image: softvisio/NAME
-    hostname: NAME
 
     deploy:
       replicas: 1
