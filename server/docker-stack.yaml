@@ -1,13 +1,13 @@
-#!/usr/bin/env -S docker stack deploy --with-registry-auth NAME -c
+#!/usr/bin/env -S docker stack deploy --with-registry-auth <NAME> -c
 
 version: "3.9"
 
 # NOTE deploy
-# docker stack deploy --with-registry-auth -c docker-stack.yaml NAME
+# docker stack deploy --with-registry-auth -c docker-stack.yaml <NAME>
 
 services:
-  NAME:
-    image: softvisio/NAME
+  <NAME>:
+    image: softvisio/<NAME>
 
     deploy:
       replicas: 1
@@ -21,8 +21,8 @@ services:
         nginx.cache.inactive: 1w
 
     configs:
-      - { source: .env.yaml, target: /var/local/dist/data/.env.yaml }
-      - { source: .env.production.yaml, target: /var/local/dist/data/.env.production.yaml }
+      - { source: .env.yaml, target: /var/local/package/.env.yaml }
+      - { source: .env.production.yaml, target: /var/local/package/.env.production.yaml }
 
     networks: [private]
 
@@ -37,8 +37,8 @@ services:
       context: .
 
 configs:
-  .env.yaml: { file: data/.env.yaml }
-  .env.production.yaml: { file: data/.env.production.yaml }
+  .env.yaml: { file: .env.yaml }
+  .env.production.yaml: { file: .env.production.yaml }
 
 networks:
   private: { external: true }
