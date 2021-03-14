@@ -21,8 +21,7 @@ services:
         nginx.cache.inactive: 1w
 
     configs:
-      - { source: .env.yaml, target: /var/local/package/.env.yaml }
-      - { source: .env.production.yaml, target: /var/local/package/.env.production.yaml }
+      - { source: .env.production.local.yaml, target: /var/local/package/.env.production.local.yaml }
 
     networks: [private]
 
@@ -37,8 +36,7 @@ services:
       context: .
 
 configs:
-  .env.yaml: { file: .env.yaml }
-  .env.production.yaml: { file: .env.production.yaml }
+  .env.production.local.yaml: { file: .env.production.local.yaml }
 
 networks:
   private: { external: true }
