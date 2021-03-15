@@ -23,19 +23,19 @@ services:
         nginx.cache.inactive: 1w
 
     configs:
-      - { source: .env.production.local.yaml, target: /var/local/package/.env.production.local.yaml }
+      - { source: .config.production.local.yaml, target: /var/local/package/.config.production.local.yaml }
 
     networks: [private]
 
     volumes:
-      - { type: tmpfs, target: /dev/shm, tmpfs: { size: 1024000000 } }
+      - { type: tmpfs, target: /dev/shm, tmpfs: { size: 1073741824 } }
       - { type: volume, source: maxmind, target: /var/lib/maxmind }
 
     build:
       context: .
 
 configs:
-  .env.production.local.yaml: { file: .env.production.local.yaml }
+  .config.production.local.yaml: { file: .config.production.local.yaml }
 
 networks:
   private: { external: true }
