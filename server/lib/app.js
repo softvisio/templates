@@ -33,6 +33,14 @@ module.exports = class extends App {
             process.exit();
         } );
 
+        // connect to the cluster
+        if ( process.env.APP_CLUSTER ) {
+            process.stdout.write( "Connecting to the cluster ... " );
+            var res = await this.cluster.connect( process.env.APP_CLUSTER, process.env.APP_CLUSTER_NAMESPACE );
+            console.log( res + "" );
+            if ( !res.ok ) return res;
+        }
+
         // create dbh
         this.#dbh = sql.connect( process.env.APP_DB );
 
@@ -47,7 +55,7 @@ module.exports = class extends App {
 
         // run threads
         process.stdout.write( "Starting threads ... " );
-        var res = await this.threads.run( {
+        res = await this.threads.run( {
             "worker": {
                 "num": 1,
                 "path": __dirname + "/threads/worker",
