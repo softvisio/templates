@@ -69,7 +69,7 @@ module.exports = class extends App {
         this.server.webpack( "/", __dirname + "/../app/www" ).api( "/api", this.#api );
 
         // run HTTP server
-        res = this._listen();
+        res = await this.server.listen( "0.0.0.0", 80, true );
         if ( !res.ok ) return res;
 
         return result( 200 );
