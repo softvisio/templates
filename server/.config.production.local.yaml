@@ -2,7 +2,9 @@ env:
   APP_PUSH_TOPIC: release
   APP_DB: pgsql://<NAME>:<PASWORD>@pgsql
   APP_CLUSTER: redis://redis/0
-  APP_CLUSTER_NAMESPACE: <NAME>
+  APP_CLUSTER_GROUPS: <NAME>.api,<NAME>.app
+  APP_CLUSTER_GROUP_API: <NAME>.api
+  APP_CLUSTER_GROUP_APP: <NAME>.app
 
 root:
   password: ~
