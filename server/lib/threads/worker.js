@@ -5,23 +5,23 @@ const sql = require( "@softvisio/core/sql" );
 module.exports = class {
     #dbh;
 
-    constructor ( appSettings ) {
+    constructor ( settings ) {
         this.#dbh = sql.connect( process.env.APP_DB );
 
-        if ( global.host ) global.host.on( "app/settings/update", this.#onAppSettingsUpdated.bind( this ) );
+        if ( global.host ) global.host.on( "app/settings/update", this.#onSettingsUpdate.bind( this ) );
 
-        this.#init( appSettings );
+        this.#init( settings );
     }
 
     get dbh () {
         return this.#dbh;
     }
 
-    async #init ( appSettings ) {
-        this.#onAppSettingsUpdated( appSettings );
+    async #init ( settings ) {
+        this.#onSettingsUpdate( settings );
     }
 
-    #onAppSettingsUpdated ( data ) {}
+    #onSettingsUpdate ( settings ) {}
 
     async RPC_test () {
         return result( 200 );

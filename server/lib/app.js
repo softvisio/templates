@@ -39,7 +39,6 @@ module.exports = class extends App {
             var res = await this.cluster.connect( process.env.APP_CLUSTER, {
                 "groups": process.env.APP_CLUSTER_GROUPS,
                 "publish": {
-                    "api": process.env.APP_CLUSTER_PUBLISH_API,
                     "app": process.env.APP_CLUSTER_PUBLISH_APP,
                 },
             } );
@@ -65,7 +64,7 @@ module.exports = class extends App {
             "worker": {
                 "num": 1,
                 "path": __dirname + "/threads/worker",
-                "constructor": [this.#api.appSettings],
+                "constructor": [this.#api.settings],
             },
         } );
         console.log( res + "" );
