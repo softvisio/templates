@@ -36,7 +36,13 @@ module.exports = class extends App {
         // connect to the cluster
         if ( process.env.APP_CLUSTER ) {
             process.stdout.write( "Connecting to the cluster ... " );
-            var res = await this.cluster.connect( process.env.APP_CLUSTER );
+            var res = await this.cluster.connect( process.env.APP_CLUSTER, {
+                "groups": process.env.APP_CLUSTER_GROUPS,
+                "publish": {
+                    "api": process.env.APP_CLUSTER_PUBLISH_API,
+                    "app": process.env.APP_CLUSTER_PUBLISH_APP,
+                },
+            } );
             console.log( res + "" );
             if ( !res.ok ) return res;
         }
