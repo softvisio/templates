@@ -2,9 +2,9 @@ env:
   APP_PUSH_TOPIC: devel
   APP_DB: pgsql://<NAME>:1@devel
   # APP_CLUSTER: redis://redis/0
-  # APP_CLUSTER_GROUPS: api.<NAME>,app.<NAME>
-  # APP_CLUSTER_PUBLISH_API: api.<NAME>
-  # APP_CLUSTER_PUBLISH_APP: app.<NAME>
+  APP_CLUSTER_GROUPS: api.<NAME>,app.<NAME>
+  APP_CLUSTER_PUBLISH_API: api.<NAME>
+  APP_CLUSTER_PUBLISH_APP: app.<NAME>
 
 root:
   password: 1
