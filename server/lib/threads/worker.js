@@ -8,7 +8,7 @@ module.exports = class {
     constructor ( settings ) {
         this.#dbh = sql.connect( process.env.APP_DB );
 
-        if ( global.host ) global.host.on( "app/settings/update", this.#onSettingsUpdate.bind( this ) );
+        if ( global.host ) global.host.on( "api/settings/update", this.#onSettingsUpdate.bind( this ) );
 
         this.#init( settings );
     }
