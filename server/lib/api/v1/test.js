@@ -2,8 +2,7 @@ const Base = require( "@softvisio/core/app/mixins/base" );
 
 /** class: Test
  * summary: Test.
- * permissions:
- *   - "*"
+ * permissions: ["*"]
  */
 module.exports = class extends Base() {
 
