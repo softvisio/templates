@@ -1,7 +1,7 @@
 env:
   APP_PUSH_TOPIC: devel
   APP_DB: pgsql://<NAME>:1@devel
-  # APP_CLUSTER: redis://redis/0
+  # APP_CLUSTER: redis://devel/0
   APP_CLUSTER_GROUPS: app.<NAME>
   APP_CLUSTER_PUBLISH_APP: app.<NAME>
 
