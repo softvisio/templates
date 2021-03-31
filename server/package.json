@@ -9,10 +9,7 @@
         "@softvisio/core": "^2.0.0"
     },
     "lint": [
-        "*.*",
-        "bin/**",
-        "lib/**",
-        "resources/**"
+        "**"
     ],
     "packages": [
         "app"
