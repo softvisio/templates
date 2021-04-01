@@ -9,6 +9,8 @@
                     <ext-button iconCls="fas fa-cog" text="Settings" textAlign="left" :hidden="!isAdmin" @tap="showSettingsDialog"/>
                     <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
                 </template>
+                <template #bottom-up/>
+                <template #bottom-down/>
             </MenuSheet>
         </ext-titlebar>
     </ext-panel>
