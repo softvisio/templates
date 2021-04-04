@@ -1,6 +1,6 @@
 <template>
     <ext-panel layout="center">
-        <AuthPanel reset signup shadow/>
+        <AuthPanel/>
     </ext-panel>
 </template>
 
