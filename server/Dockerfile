@@ -5,11 +5,11 @@ RUN \
     curl -fsSL https://bitbucket.org/softvisio/scripts/raw/main/env-build-node.sh | /bin/bash -s -- setup \
     \
     # install deps
-    && npm i --no-fund --omit=dev \
+    && npm i --omit=dev \
     \
     # build app
     && pushd app \
-    && npm i --no-fund \
+    && npm i \
     && npm run build \
     && rm -rf .[!.]* !(www) \
     && popd \
