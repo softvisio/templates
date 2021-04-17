@@ -64,7 +64,7 @@ module.exports = class extends App {
             "worker": {
                 "num": 1,
                 "path": __dirname + "/threads/worker",
-                "constructor": [this.#api.settings],
+                "arguments": [this.#api.settings],
             },
         } );
         console.log( res + "" );
