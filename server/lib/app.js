@@ -63,7 +63,7 @@ module.exports = class extends App {
         res = await this.threads.run( {
             "worker": {
                 "num": 1,
-                "path": new URL( "threads/worker.js", import.meta.url ),
+                "path": require.resolve( "./threads/worker" ),
                 "arguments": [this.#api.settings],
             },
         } );
