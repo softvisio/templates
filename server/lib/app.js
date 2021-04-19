@@ -53,8 +53,8 @@ module.exports = class extends App {
         this.#api = await this.Api.new( this, this.#dbh, {
             "permissions": CONST.PERMISSIONS,
             "objects": CONST.OBJECTS,
-            "schema": __dirname + "/db",
-            "methods": __dirname + "/api",
+            "schema": require.resolve( "./db" ),
+            "methods": require.resolve( "./api" ),
         } );
         if ( !this.#api ) return result( 500 );
 
