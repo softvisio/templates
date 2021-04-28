@@ -11,8 +11,8 @@
         "serve": "vue-cli-service serve"
     },
     "devDependencies": {
-        "@softvisio/vue": "^2.0.0",
-        "@vue/cli-plugin-babel": "^4.5.11",
+        "@softvisio/vue": "^3.0.0-alpha.0",
+        "@vue/cli-plugin-babel": "^5.0.0-beta.0",
         "vue-cli-plugin-webpack-bundle-analyzer": "^4.0.0"
     },
     "lint": [
