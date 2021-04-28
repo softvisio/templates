@@ -1,4 +1,4 @@
-import createApp from "#softvisio";
+import createApp from ":softvisio";
 
 const app = await createApp();
 

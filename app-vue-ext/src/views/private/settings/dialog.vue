@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import SettingsDialog from "#softvisio/components/settings/dialog";
+import SettingsDialog from ":softvisio/components/settings/dialog";
 
 export default {
     "components": { SettingsDialog },

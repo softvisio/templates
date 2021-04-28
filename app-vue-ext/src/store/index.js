@@ -1,4 +1,4 @@
-import Store from "#softvisio/store";
+import Store from ":softvisio/store";
 import SettingsStore from "./settings";
 
 // import CONST from "@/const";

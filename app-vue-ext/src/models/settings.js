@@ -1,4 +1,4 @@
-import SettingsModel from "#softvisio/models/settings";
+import SettingsModel from ":softvisio/models/settings";
 
 export default Ext.define( "", {
     "extend": SettingsModel,

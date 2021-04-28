@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import Avatar from "#softvisio/components/menu/avatar";
-import MenuSheet from "#softvisio/components/menu/sheet";
+import Avatar from ":softvisio/components/menu/avatar";
+import MenuSheet from ":softvisio/components/menu/sheet";
 import SettingsDialog from "./private/settings/dialog";
-import UsersDialog from "#softvisio/components/users/dialog";
+import UsersDialog from ":softvisio/components/users/dialog";
 import ProfileDialog from "./private/profile/dialog";
 
 // import CONST from "@/const";
