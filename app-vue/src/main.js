@@ -1,3 +1,5 @@
-import createApp from "#softvisio";
+import createApp from ":softvisio";
 
-createApp().then( app => app.mount( "#app" ) );
+const app = await createApp();
+
+app.mount( "#app" );
