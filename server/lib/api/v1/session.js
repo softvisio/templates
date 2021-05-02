@@ -1,10 +1,10 @@
-const mixins = require( "@softvisio/core/mixins" );
-const Base = require( "@softvisio/core/app/mixins/base" );
-const Session = require( "@softvisio/core/app/mixins/session" );
+import mixins from "@softvisio/core/mixins";
+import Base from "@softvisio/core/app/mixins/base";
+import Session from "@softvisio/core/app/mixins/session";
 
 /** class: Sesion
  * summary: Sesion.
  * extends:
  *   - "@softvisio/core/app/mixins/session#Session"
  */
-module.exports = class extends mixins( Session, Base ) {};
+export default class extends mixins( Session, Base ) {}

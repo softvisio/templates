@@ -1,10 +1,10 @@
-const mixins = require( "@softvisio/core/mixins" );
-const Base = require( "@softvisio/core/app/mixins/base" );
-const Settings = require( "@softvisio/core/app/mixins/admin/settings" );
+import mixins from "@softvisio/core/mixins";
+import Base from "@softvisio/core/app/mixins/base";
+import Settings from "@softvisio/core/app/mixins/admin/settings";
 
 /** class: Settings
  * summary: App settings.
  * extends:
  *   - "@softvisio/core/app/mixins/admin/settings#Settings"
  */
-module.exports = class extends mixins( Settings, Base ) {};
+export default class extends mixins( Settings, Base ) {}

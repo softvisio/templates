@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
-const App = require( "../lib/app" );
+import App from "#lib/app";
 
 App.runCli();
 
 const app = new App();
 
-( async () => {
-    const res = await app.run();
+const res = await app.run();
 
-    if ( !res.ok ) process.exit( 1 );
-} )();
+if ( !res.ok ) process.exit( 1 );

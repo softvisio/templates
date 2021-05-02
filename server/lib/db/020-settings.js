@@ -1,6 +1,6 @@
-const sql = require( "@softvisio/core/sql" );
+import sql from "@softvisio/core/sql";
 
-module.exports = sql`
+export default sql`
 
 -- ALTER TABLE "settings" ADD COLUMN "test" int2 NOT NULL DEFAULT 1;
 

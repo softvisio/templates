@@ -1,9 +1,9 @@
-const App = require( "@softvisio/core/app" );
-const sql = require( "@softvisio/core/sql" );
+import App from "@softvisio/core/app";
+import sql from "@softvisio/core/sql";
 
-const CONST = require( "./const" );
+import * as CONST from "#lib/const";
 
-module.exports = class extends App {
+export default class extends App {
     #dbh;
     #api;
 
@@ -47,14 +47,14 @@ module.exports = class extends App {
         }
 
         // create dbh
-        this.#dbh = sql.connect( process.env.APP_DB );
+        this.#dbh = await sql.connect( process.env.APP_DB );
 
         // create api endpoint
         this.#api = await this.Api.new( this, this.#dbh, {
             "permissions": CONST.PERMISSIONS,
             "objects": CONST.OBJECTS,
-            "schema": require.resolve( "./db" ),
-            "methods": require.resolve( "./api" ),
+            "schema": new URL( "./db", import.meta.url ),
+            "methods": new URL( "./api", import.meta.url ),
         } );
         if ( !this.#api ) return result( 500 );
 
@@ -63,7 +63,7 @@ module.exports = class extends App {
         res = await this.threads.run( {
             "worker": {
                 "num": 1,
-                "path": require.resolve( "./threads/worker" ),
+                "path": new URL( "./threads/worker.js", import.meta.url ),
                 "arguments": [this.#api.settings],
             },
         } );
@@ -71,7 +71,7 @@ module.exports = class extends App {
         if ( !res.ok ) return res;
 
         // create HTTP server locations
-        this.server.webpack( "/", __dirname + "/../app/www" ).api( "/api", this.#api );
+        this.server.webpack( "/", new URL( "../app/www", import.meta.url ) ).api( "/api", this.#api );
 
         // run HTTP server
         res = await this.server.listen( "0.0.0.0", 80, true );
@@ -79,4 +79,4 @@ module.exports = class extends App {
 
         return result( 200 );
     }
-};
+}

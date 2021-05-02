@@ -1,13 +1,11 @@
-const sql = require( "@softvisio/core/sql" );
+import sql from "@softvisio/core/sql";
 
-// const CONST = require( "../const" );
+// import * as CONST from "#lib/const";
 
-module.exports = class {
+export default class {
     #dbh;
 
     constructor ( settings ) {
-        this.#dbh = sql.connect( process.env.APP_DB );
-
         if ( global.host ) global.host.on( "api/settings/update", this.#onSettingsUpdate.bind( this ) );
 
         this.#init( settings );
@@ -18,6 +16,8 @@ module.exports = class {
     }
 
     async #init ( settings ) {
+        this.#dbh = await sql.connect( process.env.APP_DB );
+
         this.#onSettingsUpdate( settings );
     }
 
@@ -26,4 +26,4 @@ module.exports = class {
     async RPC_test () {
         return result( 200 );
     }
-};
+}

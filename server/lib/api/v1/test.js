@@ -1,10 +1,10 @@
-const Base = require( "@softvisio/core/app/mixins/base" );
+import Base from "@softvisio/core/app/mixins/base";
 
 /** class: Test
  * summary: Test.
  * permissions: ["*"]
  */
-module.exports = class extends Base() {
+export default class extends Base() {
 
     /** method: API_test
      * summary: Test method.
@@ -12,4 +12,4 @@ module.exports = class extends Base() {
     async API_test ( auth ) {
         return result( 200, new Date() );
     }
-};
+}

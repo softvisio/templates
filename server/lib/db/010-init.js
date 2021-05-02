@@ -1,6 +1,6 @@
-const sql = require( "@softvisio/core/sql" );
+import sql from "@softvisio/core/sql";
 
-module.exports = {
+export default {
     "sql": sql`
 
         -- EXTENSIONS

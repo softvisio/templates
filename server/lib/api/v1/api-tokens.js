@@ -1,10 +1,10 @@
-const mixins = require( "@softvisio/core/mixins" );
-const Base = require( "@softvisio/core/app/mixins/base" );
-const ApiTokens = require( "@softvisio/core/app/mixins/api-tokens" );
+import mixins from "@softvisio/core/mixins";
+import Base from "@softvisio/core/app/mixins/base";
+import ApiTokens from "@softvisio/core/app/mixins/api-tokens";
 
 /** class: ApiTokens
  * summary: User api access tokens management.
  * extends:
  *   - "@softvisio/core/app/mixins/api-tokens#ApiTokens"
  */
-module.exports = class extends mixins( ApiTokens, Base ) {};
+export default class extends mixins( ApiTokens, Base ) {}

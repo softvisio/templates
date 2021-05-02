@@ -1,15 +1,9 @@
-const constants = require( "@softvisio/core/constants" );
+export const PERMISSIONS = Object.freeze( {
+    "admin": Object.freeze( {
+        "name": "Administrator",
+        "description": "System administrator",
+        "default": false,
+    } ),
+} );
 
-const CONST = {
-    "PERMISSIONS": {
-        "admin": {
-            "name": "Administrator",
-            "description": "System administrator",
-            "default": false,
-        },
-    },
-
-    "OBJECTS": {},
-};
-
-module.exports = constants( CONST );
+export const OBJECTS = Object.freeze( {} );
