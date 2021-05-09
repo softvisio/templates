@@ -1,7 +1,7 @@
 import App from "@softvisio/core/app";
 import sql from "@softvisio/core/sql";
 
-import * as CONST from "#lib/const";
+import CONST from "#lib/const";
 
 export default class extends App {
     #dbh;

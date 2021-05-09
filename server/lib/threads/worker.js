@@ -1,7 +1,7 @@
 import Thread from "@softvisio/core/app/thread";
 
 // import sql from "@softvisio/core/sql";
-// import * as CONST from "#lib/const";
+// import CONST from "#lib/const";
 
 export default class extends Thread {
     constructor ( settings ) {

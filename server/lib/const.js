@@ -1,9 +1,12 @@
-export const PERMISSIONS = Object.freeze( {
-    "admin": Object.freeze( {
-        "name": "Administrator",
-        "description": "System administrator",
-        "default": false,
-    } ),
-} );
+const CONST = {
+    "PERMISSIONS": {
+        "admin": Object.freeze( {
+            "name": "Administrator",
+            "description": "System administrator",
+            "default": false,
+        } ),
+    },
+    "OBJECTS": {},
+};
 
-export const OBJECTS = Object.freeze( {} );
+export default CONST;
