@@ -1,27 +1,20 @@
-import sql from "@softvisio/core/sql";
+import Thread from "@softvisio/core/app/thread";
 
+// import sql from "@softvisio/core/sql";
 // import * as CONST from "#lib/const";
 
-export default class {
-    #dbh;
-
+export default class extends Thread {
     constructor ( settings ) {
-        if ( global.host ) global.host.on( "api/settings/update", this.#onSettingsUpdate.bind( this ) );
-
-        this.#init( settings );
+        super( settings );
     }
 
-    get dbh () {
-        return this.#dbh;
+    async _init ( settings ) {
+        await super._init( settings );
+
+        this._onSettingsUpdate( settings );
     }
 
-    async #init ( settings ) {
-        this.#dbh = await sql.connect( process.env.APP_DB );
-
-        this.#onSettingsUpdate( settings );
-    }
-
-    #onSettingsUpdate ( settings ) {}
+    _onSettingsUpdate ( settings ) {}
 
     async RPC_test () {
         return result( 200 );
