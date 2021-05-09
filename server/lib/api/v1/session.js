@@ -1,6 +1,6 @@
-import mixins from "@softvisio/core/mixins";
-import Base from "@softvisio/core/app/mixins/base";
-import Session from "@softvisio/core/app/mixins/session";
+import mixins from "#core/mixins";
+import Base from "#core/app/mixins/base";
+import Session from "#core/app/mixins/session";
 
 /** class: Sesion
  * summary: Sesion.

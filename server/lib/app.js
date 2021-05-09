@@ -1,5 +1,5 @@
-import App from "@softvisio/core/app";
-import sql from "@softvisio/core/sql";
+import App from "#core/app";
+import sql from "#core/sql";
 
 import CONST from "#lib/const";
 

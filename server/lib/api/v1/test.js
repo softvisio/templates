@@ -1,4 +1,4 @@
-import Base from "@softvisio/core/app/mixins/base";
+import Base from "#core/app/mixins/base";
 
 /** class: Test
  * summary: Test.

@@ -1,6 +1,6 @@
-import mixins from "@softvisio/core/mixins";
-import Base from "@softvisio/core/app/mixins/base";
-import Users from "@softvisio/core/app/mixins/admin/users";
+import mixins from "#core/mixins";
+import Base from "#core/app/mixins/base";
+import Users from "#core/app/mixins/admin/users";
 
 /** class: Users
  * summary: App users.

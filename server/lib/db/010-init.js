@@ -1,4 +1,4 @@
-import sql from "@softvisio/core/sql";
+import sql from "#core/sql";
 
 export default {
     "sql": sql`

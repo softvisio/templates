@@ -4,7 +4,9 @@
     "private": true,
     "type": "module",
     "imports": {
-        "#lib/*": "./lib/*.js"
+        "#core/*": "@softvisio/core/*",
+        "#lib/*": "./lib/*.js",
+        "#resources/*": "./resources/*"
     },
     "scripts": {
         "lint": "softvisio-cli lint"

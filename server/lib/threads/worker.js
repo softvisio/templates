@@ -1,6 +1,6 @@
-import Thread from "@softvisio/core/app/thread";
+import Thread from "#core/app/thread";
 
-// import sql from "@softvisio/core/sql";
+// import sql from "#core/sql";
 // import CONST from "#lib/const";
 
 export default class extends Thread {

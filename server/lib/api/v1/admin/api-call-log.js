@@ -1,6 +1,6 @@
-import mixins from "@softvisio/core/mixins";
-import Base from "@softvisio/core/app/mixins/base";
-import ApiCallLog from "@softvisio/core/app/mixins/admin/api-call-log";
+import mixins from "#core/mixins";
+import Base from "#core/app/mixins/base";
+import ApiCallLog from "#core/app/mixins/admin/api-call-log";
 
 /** class: ApiCallLog
  * summary: App API call log.

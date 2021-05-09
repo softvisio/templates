@@ -1,6 +1,6 @@
-import mixins from "@softvisio/core/mixins";
-import Base from "@softvisio/core/app/mixins/base";
-import Settings from "@softvisio/core/app/mixins/admin/settings";
+import mixins from "#core/mixins";
+import Base from "#core/app/mixins/base";
+import Settings from "#core/app/mixins/admin/settings";
 
 /** class: Settings
  * summary: App settings.

@@ -1,6 +1,6 @@
-import mixins from "@softvisio/core/mixins";
-import Base from "@softvisio/core/app/mixins/base";
-import Profile from "@softvisio/core/app/mixins/profile";
+import mixins from "#core/mixins";
+import Base from "#core/app/mixins/base";
+import Profile from "#core/app/mixins/profile";
 
 /** class: Profile
  * summary: User profile.
