@@ -9,7 +9,8 @@
         "#resources/*": "./resources/*"
     },
     "scripts": {
-        "lint": "softvisio-cli lint"
+        "lint": "softvisio-cli lint",
+        "test": "jest"
     },
     "dependencies": {
         "@softvisio/core": "^3.0.0"

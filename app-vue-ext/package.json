@@ -8,7 +8,8 @@
         "build-cordova": "env VUE_APP_BUILD_CORDOVA=true vue-cli-service build --mode=production",
         "build-cordova-devel": "env VUE_APP_BUILD_CORDOVA=true vue-cli-service build --mode=development",
         "lint": "softvisio-cli lint",
-        "serve": "vue-cli-service serve"
+        "serve": "vue-cli-service serve",
+        "test": "jest"
     },
     "devDependencies": {
         "@softvisio/vue-ext": "^3.0.0-alpha.0",
