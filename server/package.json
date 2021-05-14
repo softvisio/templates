@@ -10,7 +10,7 @@
     },
     "scripts": {
         "lint": "softvisio-cli lint",
-        "test": "jest"
+        "test": "env NODE_OPTIONS=--experimental-vm-modules jest --testPathPattern __tests__"
     },
     "dependencies": {
         "@softvisio/core": "^3.0.0"
