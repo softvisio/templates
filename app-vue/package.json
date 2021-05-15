@@ -9,7 +9,7 @@
         "build-cordova-devel": "env VUE_APP_BUILD_CORDOVA=true vue-cli-service build --mode=development",
         "lint": "softvisio-cli lint",
         "serve": "vue-cli-service serve",
-        "test": "env NODE_OPTIONS=--experimental-vm-modules jest --testPathPattern __tests__"
+        "test": "env NODE_OPTIONS=--experimental-vm-modules jest --rootDir __tests__"
     },
     "devDependencies": {
         "@softvisio/vue": "^3.0.0-alpha.0",
