@@ -2,7 +2,7 @@
 
 import App from "#lib/app";
 
-App.runCli();
+App.CLI.parse( App );
 
 const app = new App();
 

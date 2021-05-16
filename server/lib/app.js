@@ -6,6 +6,7 @@ import CONST from "#lib/const";
 export default class extends App {
     #dbh;
     #api;
+    #rpc;
 
     static cli () {
         return {
@@ -53,10 +54,16 @@ export default class extends App {
         this.#api = await this.API.new( this, this.#dbh, {
             "permissions": CONST.PERMISSIONS,
             "objects": CONST.OBJECTS,
-            "schema": new URL( "./db", import.meta.url ),
-            "methods": new URL( "./api", import.meta.url ),
+            "dbSchema": new URL( "./db", import.meta.url ),
+            "apiSchema": new URL( "./api", import.meta.url ),
         } );
         if ( !this.#api ) return result( 500 );
+
+        // create rpc endpoint
+        // this.#rpc = await this.RPC.new( this, {
+        //     "apiSchema": new URL( "./rpc", import.meta.url ),
+        // } );
+        // if ( !this.#rpc ) return result( 500 );
 
         // run threads
         process.stdout.write( "Starting threads ... " );
@@ -78,8 +85,8 @@ export default class extends App {
         if ( !res.ok ) return res;
 
         // run RPC service
-        res = await this.cluster.listen( this.#api );
-        if ( !res.ok ) return res;
+        // res = await this.cluster.listen( this.#rpc );
+        // if ( !res.ok ) throw res;
 
         return result( 200 );
     }

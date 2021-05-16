@@ -16,7 +16,7 @@ export default class extends Thread {
 
     _onSettingsUpdate ( settings ) {}
 
-    async RPC_test () {
+    async API_test () {
         return result( 200 );
     }
 }
