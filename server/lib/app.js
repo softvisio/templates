@@ -50,7 +50,7 @@ export default class extends App {
         this.#dbh = await sql.connect( process.env.APP_DB );
 
         // create api endpoint
-        this.#api = await this.Api.new( this, this.#dbh, {
+        this.#api = await this.API.new( this, this.#dbh, {
             "permissions": CONST.PERMISSIONS,
             "objects": CONST.OBJECTS,
             "schema": new URL( "./db", import.meta.url ),
@@ -75,6 +75,10 @@ export default class extends App {
 
         // run HTTP server
         res = await this.server.listen( "0.0.0.0", 80, true );
+        if ( !res.ok ) return res;
+
+        // run RPC service
+        res = await this.cluster.listen( this.#api );
         if ( !res.ok ) return res;
 
         return result( 200 );
