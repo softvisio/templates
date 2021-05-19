@@ -7,7 +7,6 @@
         "build": "env VUE_APP_BUILD_CORDOVA= vue-cli-service build --mode=production",
         "build-cordova": "env VUE_APP_BUILD_CORDOVA=true vue-cli-service build --mode=production",
         "build-cordova-devel": "env VUE_APP_BUILD_CORDOVA=true vue-cli-service build --mode=development",
-        "lint": "softvisio-cli lint",
         "serve": "vue-cli-service serve"
     },
     "devDependencies": {

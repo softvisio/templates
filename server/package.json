@@ -8,9 +8,6 @@
         "#lib/*": "./lib/*.js",
         "#resources/*": "./resources/*"
     },
-    "scripts": {
-        "lint": "softvisio-cli lint"
-    },
     "dependencies": {
         "@softvisio/core": "^3.0.0"
     },
