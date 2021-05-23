@@ -9,7 +9,7 @@ export default class extends Base() {
     /** method: API_test
      * summary: Test method.
      */
-    async API_test ( auth ) {
+    async API_test ( ctx ) {
         return result( 200, new Date() );
     }
 }
