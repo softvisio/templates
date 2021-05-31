@@ -1,0 +1,3 @@
+summary: App users.
+extends:
+  - "@softvisio/core/app/mixins/admin/users"

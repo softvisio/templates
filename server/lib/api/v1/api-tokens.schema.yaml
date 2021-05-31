@@ -1,0 +1,3 @@
+summary: User api access tokens management.
+extends:
+  - "@softvisio/core/app/mixins/api-tokens"

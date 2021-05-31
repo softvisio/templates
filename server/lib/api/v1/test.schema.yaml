@@ -1,0 +1,10 @@
+summary: Test.
+permissions: ["*"]
+
+methods:
+  test:
+    summary: Test method.
+    params:
+      - name: args
+        schema:
+          type: string

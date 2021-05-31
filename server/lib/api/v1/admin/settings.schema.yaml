@@ -1,0 +1,3 @@
+summary: App settings.
+extends:
+  - "@softvisio/core/app/mixins/admin/settings"
