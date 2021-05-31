@@ -1,3 +1,1 @@
-summary: User profile.
-extends:
-  - "@softvisio/core/app/mixins/profile"
+extends: "@softvisio/core/app/mixins/profile"

@@ -1,3 +1,1 @@
-summary: App API call log.
-extends:
-  - "@softvisio/core/app/mixins/admin/api-call-log"
+extends: "@softvisio/core/app/mixins/admin/api-call-log"

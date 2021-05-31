@@ -1,3 +1,1 @@
-summary: Sesion.
-extends:
-  - "@softvisio/core/app/mixins/session"
+extends: "@softvisio/core/app/mixins/session"
