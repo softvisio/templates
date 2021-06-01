@@ -1,3 +1,3 @@
-import Profile from "#core/app/api/prototype/profile";
+import Profile from "#core/app/api/prototypes/profile";
 
 export default class extends Profile {}
