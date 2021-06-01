@@ -1,0 +1,10 @@
+lint:
+  - "**"
+
+packages:
+  - app
+
+documentation:
+  api:
+    - { source: "./lib/api", target: "./docs/api" }
+    # - { source: "./lib/rpc", target: "./docs/rpc" }
