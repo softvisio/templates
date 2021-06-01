@@ -4,7 +4,8 @@ lint:
 packages:
   - app
 
-documentation:
+docs:
+  location: docs
   api:
-    - { source: "./lib/api", target: "./docs/api" }
-    # - { source: "./lib/rpc", target: "./docs/rpc" }
+    - { source: "lib/api", target: "api" }
+    # - { source: "lib/rpc", target: "rpc" }
