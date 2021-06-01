@@ -1,1 +1,1 @@
-extends: "@softvisio/core/app/prototype/admin/users"
+extends: "#core/app/api/prototype/admin/users"

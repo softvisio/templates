@@ -1,1 +1,1 @@
-extends: "@softvisio/core/app/prototype/session"
+extends: "#core/app/api/prototype/session"

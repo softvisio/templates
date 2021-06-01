@@ -1,4 +1,4 @@
-import Prototype from "#core/app/prototype";
+import Prototype from "#core/app/api/prototype";
 
 export default class extends Prototype {
     async API_test ( ctx ) {

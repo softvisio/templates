@@ -1,1 +1,1 @@
-extends: "@softvisio/core/app/prototype/api-tokens"
+extends: "#core/app/api/prototype/api-tokens"

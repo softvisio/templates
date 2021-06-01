@@ -1,3 +1,3 @@
-import ApiTokens from "#core/app/prototype/api-tokens";
+import ApiTokens from "#core/app/api/prototype/api-tokens";
 
 export default class extends ApiTokens {}
