@@ -1,5 +1,0 @@
-lint:
-  - "*.*"
-  - "public/**"
-  - "resources/**"
-  - "src/**"
