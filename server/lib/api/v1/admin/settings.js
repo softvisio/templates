@@ -1,5 +1,3 @@
-import mixins from "#core/mixins";
-import Base from "#core/app/mixins/base";
-import Settings from "#core/app/mixins/admin/settings";
+import Settings from "#core/app/prototype/admin/settings";
 
-export default class extends mixins( Settings, Base ) {}
+export default class extends Settings {}

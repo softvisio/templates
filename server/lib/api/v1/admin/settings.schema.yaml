@@ -1,1 +1,1 @@
-extends: "@softvisio/core/app/mixins/admin/settings"
+extends: "@softvisio/core/app/prototype/admin/settings"

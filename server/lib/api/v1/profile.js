@@ -1,5 +1,3 @@
-import mixins from "#core/mixins";
-import Base from "#core/app/mixins/base";
-import Profile from "#core/app/mixins/profile";
+import Profile from "#core/app/prototype/profile";
 
-export default class extends mixins( Profile, Base ) {}
+export default class extends Profile {}
