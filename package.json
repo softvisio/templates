@@ -7,14 +7,14 @@
         "softvisio",
         "template"
     ],
-    "homepage": "https://bitbucket.org/softvisio/templates",
+    "homepage": "https://github.com/softvisio/templates",
     "bugs": {
-        "url": "https://bitbucket.org/softvisio/templates/issues",
+        "url": "https://github.com/softvisio/templates/issues",
         "email": "zdm@softvisio.net"
     },
     "repository": {
         "type": "git",
-        "url": "https://bitbucket.org/softvisio/templates.git"
+        "url": "https://github.com/softvisio/templates.git"
     },
     "author": "zdm <zdm@softvisio.net>"
 }
