@@ -3,7 +3,7 @@
 1. Clone templates and use `app-vue` subdirectory as template for the new project:
 
     ```
-    git clone https://bitbucket.org/softvisio/templates.git
+    git clone https://github.com/softvisio/templates.git
     ```
 
     - Remove trailing "\_\_" from the `package.json__` and `.gitignore__` files.
