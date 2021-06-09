@@ -1,10 +1,4 @@
-api:
-  lib/api:
-    target: api
-    options:
-      type: "API"
+logo: false
 
-  # lib/rpc:
-  #   target: rpc
-  #   options:
-  #     type: "RPC"
+api: [lib/api]
+# rpc: [lib/rpc]
