@@ -1,9 +1,9 @@
-summary: Test
+title: Test
 permissions: ["*"]
 
 methods:
   test:
-    summary: Test method
+    title: Test method
     params:
       - name: args
         schema:
