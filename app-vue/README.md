@@ -72,7 +72,7 @@ if ( res.ok ) {
 
 // request failed
 else {
-    // res.status, res.reason contains response status code and error message
+    // res.status, res.statusText contains response status code and error message
 }
 ```
 
@@ -139,7 +139,7 @@ This project template provides `session` store that implements interface to the 
         // credentials are valid, but user is not authorized to access this area
     }
     else {
-        // bad API response or connection problems, refer to the res.reason for more information
+        // bad API response or connection problems, refer to the res.statusText for more information
     }
     ```
 
