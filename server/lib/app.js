@@ -81,7 +81,7 @@ export default class extends App {
         this.server.webpack( "/", new URL( "../app/www", import.meta.url ) ).api( "/api", this.#api );
 
         // run HTTP server
-        res = await this.server.listen( "0.0.0.0", 80, true );
+        res = await this.server.listen( "0.0.0.0", 80 );
         if ( !res.ok ) return res;
 
         // run RPC service
