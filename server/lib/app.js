@@ -46,7 +46,7 @@ export default class extends App {
         // create dbh
         this.#dbh = await sql.connect( process.env.APP_DB );
 
-        // create api
+        // create API
         res = await this.createAPI( this.API, this.#dbh, {
             "permissions": CONST.PERMISSIONS,
             "objects": CONST.OBJECTS,
@@ -55,7 +55,7 @@ export default class extends App {
         } );
         if ( !res.ok ) return res;
 
-        // create rpc
+        // create RPC
         res = await this.createRPC( this.RPC, {
             "apiSchema": new URL( "./rpc", import.meta.url ),
         } );
