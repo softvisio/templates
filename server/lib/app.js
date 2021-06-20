@@ -36,8 +36,11 @@ export default class extends App {
         var res = await this.initCluster( {
             "url": process.env.APP_CLUSTER,
             "namespace": process.env.APP_CLUSTER_NAMESPACE,
-            "services": true,
         } );
+        if ( !res.ok ) return res;
+
+        // init services
+        res = await this.initServices();
         if ( !res.ok ) return res;
 
         // create dbh
@@ -68,16 +71,16 @@ export default class extends App {
         } );
         if ( !res.ok ) return res;
 
+        // run RPC server
+        res = await this.rpc.listen();
+        if ( !res.ok ) return res;
+
         // init public HTTP server
         this.server.webpack( "/", new URL( "../app/www", import.meta.url ) ).api( "/api", this.api );
 
         // run public HTTP server
-        res = await this.server.listen( "0.0.0.0", 80 );
+        res = await this.server.listen();
         if ( !res.ok ) return res;
-
-        // run private HTTP server
-        res = await this.cluster.listen( this.rpc );
-        if ( !res.ok ) throw res;
 
         return result( 200 );
     }
