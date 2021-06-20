@@ -32,18 +32,13 @@ export default class extends App {
             process.exit();
         } );
 
-        // connect to the cluster
-        if ( process.env.APP_CLUSTER ) {
-            process.stdout.write( "Connecting to the cluster ... " );
-            var res = await this.cluster.connect( process.env.APP_CLUSTER, {
-                "groups": process.env.APP_CLUSTER_GROUPS,
-                "publish": {
-                    "app": process.env.APP_CLUSTER_PUBLISH_APP,
-                },
-            } );
-            console.log( res + "" );
-            if ( !res.ok ) return res;
-        }
+        // init cluster
+        var res = this.initCluster( {
+            "url": process.env.APP_CLUSTER_URL,
+            "namespace": process.env.APP_CLUSTER_NAMESPACE,
+            "services": true,
+        } );
+        if ( !res.ok ) return res;
 
         // create dbh
         this.#dbh = await sql.connect( process.env.APP_DB );
@@ -75,14 +70,14 @@ export default class extends App {
         console.log( res + "" );
         if ( !res.ok ) return res;
 
-        // create HTTP server locations
+        // init public HTTP server
         this.server.webpack( "/", new URL( "../app/www", import.meta.url ) ).api( "/api", this.api );
 
-        // run HTTP server
+        // run public HTTP server
         res = await this.server.listen( "0.0.0.0", 80 );
         if ( !res.ok ) return res;
 
-        // run RPC service
+        // run private HTTP server
         res = await this.cluster.listen( this.rpc );
         if ( !res.ok ) throw res;
 
