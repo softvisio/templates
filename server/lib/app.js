@@ -33,7 +33,7 @@ export default class extends App {
         } );
 
         // init cluster
-        var res = this.initCluster( {
+        var res = await this.initCluster( {
             "url": process.env.APP_CLUSTER,
             "namespace": process.env.APP_CLUSTER_NAMESPACE,
             "services": true,
