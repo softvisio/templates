@@ -1,9 +1,9 @@
 env:
   APP_PUSH_TOPIC: release
   APP_DB: pgsql://<NAME>:<PASWORD>@pgsql
-  APP_CLUSTER: redis://devel/0
+  APP_CLUSTER: redis://redis/0
   APP_CLUSTER_NAMESPACE: <NAME>
-  APP_SERVICE_DETABASES: ws://databases:8080
+  # APP_SERVICE_DATABASES: ws://databases:8080
 
 root:
   password: ~

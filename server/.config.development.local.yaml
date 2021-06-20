@@ -3,7 +3,7 @@ env:
   APP_DB: pgsql://<NAME>:1@devel
   # APP_CLUSTER: redis://devel/0
   # APP_CLUSTER_NAMESPACE: <NAME>
-  # APP_SERVICE_DETABASES: ws://databases:8080
+  # APP_SERVICE_DATABASES: ws://databases:8080
 
 root:
   password: 1
