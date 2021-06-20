@@ -59,15 +59,13 @@ export default class extends App {
         if ( !res.ok ) return res;
 
         // run threads
-        process.stdout.write( "Starting threads ... " );
-        res = await this.threads.run( {
+        res = await this.runThreads( {
             "worker": {
                 "num": 1,
                 "path": new URL( "./threads/worker.js", import.meta.url ),
                 "arguments": [this.api.settings],
             },
         } );
-        console.log( res + "" );
         if ( !res.ok ) return res;
 
         // init public HTTP server
