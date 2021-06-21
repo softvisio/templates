@@ -1,8 +1,7 @@
 env:
   APP_PUSH_TOPIC: devel
   APP_DB: pgsql://<NAME>:1@devel
-  # APP_CLUSTER: redis://devel/0
-  # APP_CLUSTER_NAMESPACE: <NAME>
+  # APP_CLUSTER: redis://devel/0?namespace=<NAME>
   # APP_SERVICE_databases: ws://databases:8080
 
 root:
