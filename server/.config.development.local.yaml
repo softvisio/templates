@@ -2,7 +2,7 @@ env:
   APP_PUSH_TOPIC: devel
   APP_DB: pgsql://<NAME>:1@devel
   # APP_CLUSTER: redis://devel/0?namespace=<NAME>
-  # APP_SERVICE_databases: ws://devel:10000?cacheDrop=disconnect&cacheDrop=event/update
+  # APP_SERVICE_databases: ws://devel:10000?cacheReset=disconnect&cacheReset=event/update
 
 root:
   password: 1
