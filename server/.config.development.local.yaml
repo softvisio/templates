@@ -18,7 +18,7 @@ settings:
   smtp_username: no-reply@softvisio.net
   smtp_password: ~
 
-  # TELEGRAM BOT
+  # telegram bot
   telegram_bot_name: ~
   telegram_bot_key: ~
   telegram_bot_enabled: false
