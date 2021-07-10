@@ -63,7 +63,7 @@ export default class extends App {
             "worker": {
                 "num": 1,
                 "path": new URL( "./threads/worker.js", import.meta.url ),
-                "arguments": [this.settings],
+                "arguments": null,
             },
         } );
         if ( !res.ok ) return res;

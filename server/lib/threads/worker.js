@@ -4,8 +4,8 @@ import Base from "#core/app/threads/base";
 // import CONST from "#lib/const";
 
 export default class extends Base {
-    constructor ( settings ) {
-        super( settings );
+    constructor ( ...args ) {
+        super( ...args );
     }
 
     async _init () {
