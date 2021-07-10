@@ -1,25 +1,19 @@
 env:
   APP_PUSH_TOPIC: release
+
+  APP_SITE_URL: http://localhost/
+
   APP_DB: pgsql://<NAME>:<PASWORD>@pgsql
   APP_CLUSTER: redis://redis/0?namespace=<NAME>
   # APP_SERVICE_datasets: ws://datasets:8080?cacheReset=disconnect&cacheReset=event/update
 
-root:
-  password: ~
-  email: admin@softvisio.net
+  # root
+  APP_ROOT_PASSWORD: ~
+  APP_ROOT_EMAIL: admin@softvisio.net
 
-settings:
-  app_url: http://localhost/
-
-  # SMTP
-  smtp_from: no-reply "no-reply@softvisio.net"
-  smtp_hostname: smtp.gmail.com
-  smtp_port: 465
-  smtp_username: no-reply@softvisio.net
-  smtp_password: ~
-
-  # telegram bot
-  telegram_bot_name: ~
-  telegram_bot_key: ~
-  telegram_bot_enabled: false
-  telegram_signin_enabled: false
+  # smtp
+  APP_SMTP_FROM: Arbitrator [devel] "no-reply@softvisio.net"
+  APP_SMTP_HOSTNAME: smtp.gmail.com
+  APP_SMTP_PORT: 465
+  APP_SMTP_USERNAME: no-reply@softvisio.net
+  APP_SMTP_PASSWORD: ~
