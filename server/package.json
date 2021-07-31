@@ -4,12 +4,13 @@
     "private": true,
     "type": "module",
     "imports": {
+        "#app/*": "@softvisio/app/*",
         "#core/*": "@softvisio/core/*",
         "#lib/*": "./lib/*.js",
         "#resources/*": "./resources/*"
     },
     "dependencies": {
-        "@softvisio/core": "^4.0.0"
+        "@softvisio/app": "^1.0.1"
     },
     "packages": [
         "app"
