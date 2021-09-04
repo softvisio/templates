@@ -13,6 +13,6 @@
         "serve": "vue-cli-service serve"
     },
     "devDependencies": {
-        "@softvisio/vue": "^3.0.0-alpha.0"
+        "@softvisio/vue": "^3.0.0"
     }
 }
