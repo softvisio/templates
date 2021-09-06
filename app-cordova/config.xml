@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!-- reference, https://cordova.apache.org/docs/en/latest/config_ref/ -->
 <widget id="com.domain.name" version="0.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>App Name</name>
@@ -23,7 +22,11 @@
     </plugin>
 
     <!-- android -->
-    <platform name="android">
+	<platform name="android">
+
+		<!-- required for androidx based plugins (cordova-plugin-firebasex)  -->
+		<preference name="AndroidXEnabled" value="true" />
+
         <allow-intent href="market:*" />
 
         <icon density="ldpi" src="resources/android/icons/ldpi.png" />

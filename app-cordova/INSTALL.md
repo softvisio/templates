@@ -1,6 +1,6 @@
-# ADD PLUGINS
+# Add plugins
 
-**WARNING!** Do not use `cordova prepare`, it installs outdated platforms. Use `cordova platform add xxx@latest` instead. After platform added remove cordova dependencies from `package.json`.
+:warn: Do not use `cordova prepare`, it installs outdated platforms. Use `cordova platform add xxx@latest` instead. After platform added remove cordova dependencies from `package.json`.
 
 ```
 cordova plugin add cordova-plugin-device
