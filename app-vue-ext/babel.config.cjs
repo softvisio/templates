@@ -1,3 +1,3 @@
-const config = require( "@softvisio/vue/resources/babel.config.cjs" );
+const config = require( "@softvisio/vue-ext/resources/babel.config.cjs" );
 
 module.exports = config;
