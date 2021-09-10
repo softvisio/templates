@@ -5,7 +5,6 @@
 ```
 cordova plugin add cordova-plugin-device
 cordova plugin add cordova-plugin-network-information
-cordova plugin add cordova-plugin-whitelist
 ```
 
 ```
