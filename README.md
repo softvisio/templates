@@ -15,7 +15,7 @@ In `build.json` set `developmentTeam` id. Get your TeamID from [https://develope
 ```shell
 cordova plugin add cordova-plugin-device
 cordova plugin add cordova-plugin-network-information
-cordova plugin add cordova-plugin-firebasex
+cordova plugin add cordova-plugin-firebasex@latest-cli
 cordova plugin add cordova-plugin-badge
 ```
 
