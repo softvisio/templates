@@ -1,4 +1,4 @@
-import createApp from ":softvisio";
+import createApp from "#vue";
 
 const app = await createApp();
 

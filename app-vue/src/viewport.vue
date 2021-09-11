@@ -1,5 +1,5 @@
 <script>
-import Viewport from ":softvisio/viewport";
+import Viewport from "#vue/viewport";
 
 export default {
     "extends": Viewport,

@@ -4,7 +4,8 @@
     "private": true,
     "type": "module",
     "imports": {
-        "#core/*": "@softvisio/core/*"
+        "#core/*": "@softvisio/core/*",
+        "#vue/*": "@softvisio/vue/*"
     },
     "scripts": {
         "build": "env VUE_APP_BUILD_CORDOVA= vue-cli-service build --mode=production",
