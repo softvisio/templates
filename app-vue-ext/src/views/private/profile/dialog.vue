@@ -1,14 +1,14 @@
 <template>
     <ProfileDialog>
         <template #top>
-            <!-- <ext&#45;panel title="General Settings"> -->
-            <!--     <ext&#45;toolbar docked="top" :hidden="titles !== 'true'"> -->
+            <!-- <ext-panel title="General Settings"> -->
+            <!--     <ext-toolbar docked="top" :hidden="titles"> -->
             <!--         <ext&#45;container html="General Settings"/> -->
-            <!--     </ext&#45;toolbar> -->
-            <!--     <ext&#45;fieldset defaults='{"labelAlign":"left","labelWidth":250}'> -->
-            <!--         <ext&#45;textfield label="Test field" bind="{record.test}"/> -->
-            <!--     </ext&#45;fieldset> -->
-            <!-- </ext&#45;panel> -->
+            <!--     </ext-toolbar> -->
+            <!--     <ext-fieldset defaults='{"labelAlign":"left","labelWidth":250}'> -->
+            <!--         <ext-textfield label="Test field" bind="{record.test}"/> -->
+            <!--     </ext-fieldset> -->
+            <!-- </ext-panel> -->
         </template>
 
         <template #bottom/>
