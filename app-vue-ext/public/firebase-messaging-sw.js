@@ -4,13 +4,12 @@ importScripts( "https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"
 importScripts( "https://www.gstatic.com/firebasejs/9.1.0/firebase-messaging-compat.js" );
 
 const firebaseConfig = {
-    "apiKey": "AIzaSyBSV4i4KhmDx9pNZrjUiKojK6aNxkFw9GM",
-    "authDomain": "smt-lounge.firebaseapp.com",
-    "databaseURL": "https://smt-lounge.firebaseio.com",
-    "projectId": "smt-lounge",
-    "storageBucket": "smt-lounge.appspot.com",
-    "messagingSenderId": "785928863534",
-    "appId": "1:785928863534:web:30ddc46afbc3b1fb2c84bf",
+    "apiKey": "AIzaSyD58KfIhz_tCi_kM1Glah8XCgyELJDk8F0",
+    "authDomain": "devel-939ed.firebaseapp.com",
+    "projectId": "devel-939ed",
+    "storageBucket": "devel-939ed.appspot.com",
+    "messagingSenderId": "283172584233",
+    "appId": "1:283172584233:web:3af375dc1c2afc6e4cd538",
 };
 
 firebase.initializeApp( firebaseConfig );
