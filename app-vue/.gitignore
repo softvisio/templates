@@ -1,6 +1,8 @@
 # common
 /data/
 /wiki/
+/env.local
+/env.*.local
 
 # cordova
 /hooks/
@@ -10,7 +12,5 @@
 # node
 /node_modules/
 
-# vue
-/.env.local
-/.env.*.local
+# webpack
 /www/

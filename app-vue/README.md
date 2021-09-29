@@ -10,7 +10,7 @@
 
     - Set package `name` in `package.json`.
 
-    - Edit `.env` and `.env.development` files, set `APP_TITLE` and `APP_API_URL` variables.
+    - Edit `env` files, set `APP_TITLE` and `APP_API_URL` variables.
 
 2. Install `@softvisio/cli` globally:
 
