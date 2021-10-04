@@ -9,8 +9,9 @@ CREATE EXTENSION IF NOT EXISTS "timescaledb" CASCADE;
 
 -- types
 -- CREATE DOMAIN "currency" AS decimal(12, 4) NOT NULL DEFAULT 0;
+
 `;
 
-export const types = {
-    "currency": { "decode": Number },
-};
+// export const types = {
+//     "currency": { "decode": Number },
+// };
