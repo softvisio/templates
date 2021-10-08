@@ -32,12 +32,12 @@ export default class extends App {
             process.exit();
         } );
 
-        // init cluster
-        var res = await this.initCluster( process.env.APP_CLUSTER );
+        // init services
+        var res = await this.initServices();
         if ( !res.ok ) return res;
 
-        // init services
-        res = await this.initServices();
+        // init cluster
+        res = await this.initCluster( process.env.APP_CLUSTER_ID, this.services.get( "core" ) );
         if ( !res.ok ) return res;
 
         // create dbh
