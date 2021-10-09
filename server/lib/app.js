@@ -68,14 +68,14 @@ export default class extends App {
         } );
         if ( !res.ok ) return res;
 
-        // run RPC server
+        // init HTTP server
+        this.server.webpack( "/", new URL( "../app/www", import.meta.url ) ).api( "/api", this.api );
+
+        // start RPC server
         res = await this.rpc.listen();
         if ( !res.ok ) return res;
 
-        // init public HTTP server
-        this.server.webpack( "/", new URL( "../app/www", import.meta.url ) ).api( "/api", this.api );
-
-        // run public HTTP server
+        // start HTTP+API server
         res = await this.server.listen();
         if ( !res.ok ) return res;
 
