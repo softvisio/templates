@@ -8,8 +8,8 @@ export default class extends Base {
         super( ...args );
     }
 
-    async _init () {
-        await super._init();
+    async _new () {
+        await super._new();
     }
 
     async API_test () {
