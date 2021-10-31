@@ -1,11 +1,12 @@
 import Base from "#app/threads/base";
+import CONST from "#lib/const";
 
 // import sql from "#core/sql";
 // import CONST from "#lib/const";
 
 export default class extends Base {
     constructor ( ...args ) {
-        super( ...args );
+        super( CONST );
     }
 
     async _new () {
