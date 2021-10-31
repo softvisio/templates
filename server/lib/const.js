@@ -12,10 +12,12 @@ const CONST = {
     "notifications": {
         "security": {
             "name": "Security",
+            "description": "Various security related notifications",
             "channels": { "internal": true, "email": true, "telegram": true, "push": true },
         },
         "other": {
             "name": "Other",
+            "description": "Other unclassified notifications",
             "channels": { "internal": true, "email": true, "telegram": true, "push": true },
         },
     },
