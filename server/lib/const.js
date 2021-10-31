@@ -10,15 +10,13 @@ const CONST = {
     "objects": {},
 
     "notifications": {
-        "types": {
-            "security": {
-                "name": "Security",
-                "channels": { "internal": true, "email": true, "telegram": true, "push": true },
-            },
-            "other": {
-                "name": "Other",
-                "channels": { "internal": true, "email": true, "telegram": true, "push": true },
-            },
+        "security": {
+            "name": "Security",
+            "channels": { "internal": true, "email": true, "telegram": true, "push": true },
+        },
+        "other": {
+            "name": "Other",
+            "channels": { "internal": true, "email": true, "telegram": true, "push": true },
         },
     },
 };
