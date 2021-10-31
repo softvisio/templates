@@ -1,12 +1,19 @@
 const CONST = {
-    "PERMISSIONS": {
+    "permissions": {
         "admin": Object.freeze( {
             "name": "Administrator",
             "description": "System administrator",
             "default": false,
         } ),
     },
-    "OBJECTS": {},
+
+    "objects": {},
+
+    "notifications": {
+        "categories": {
+            "other": { "internal": true, "email": true, "telegram": true, "push": true },
+        },
+    },
 };
 
 export default CONST;
