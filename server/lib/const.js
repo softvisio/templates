@@ -7,7 +7,15 @@ const CONST = {
         } ),
     },
 
-    "objects": {},
+    "objects": {
+        "task": {
+            "id": 0,
+            "roles": {
+                "admin": { "name": "Adminitrator", "description": "Task admininistrator. Full access.", "edit": true },
+                "user": { "name": "User", "description": "Task user. Read only." },
+            },
+        },
+    },
 
     "notifications": {
         "security": {
