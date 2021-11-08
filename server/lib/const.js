@@ -11,7 +11,7 @@ const CONST = {
         "task": {
             "id": 0,
             "roles": {
-                "admin": { "name": "Adminitrator", "description": "Task admininistrator. Full access.", "canEditRoles": true },
+                "admin": { "name": "Administrator", "description": "Task administrator. Full access.", "canEditRoles": true },
                 "user": { "name": "User", "description": "Task user. Read only." },
             },
         },
