@@ -1,6 +1,6 @@
 const CONST = {
     "apiEnabled": true,
-    "rpcEnabled": true,
+    "rpcEnabled": false,
     "httpServerEnabled": true,
 
     "permissions": {
