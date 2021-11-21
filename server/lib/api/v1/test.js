@@ -1,4 +1,4 @@
-import Base from "#app/prototypes/base";
+import Base from "#core/app/prototypes/base";
 
 export default class extends Base {
     async API_test ( ctx ) {
