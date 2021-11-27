@@ -1,7 +1,8 @@
 const CONST = {
     "apiEnabled": true,
     "rpcEnabled": false,
-    "httpServerEnabled": true,
+    "publicHttpServerEnabled": null,
+    "privateHttpServerEnabled": null,
 
     "permissions": {
         "admin": Object.freeze( {

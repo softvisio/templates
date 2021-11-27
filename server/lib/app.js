@@ -25,7 +25,9 @@ export default class extends App {
         };
     }
 
-    _initHttpServer () {
-        this.server.webpack( "/", new URL( "../app/www", import.meta.url ) );
+    _initPrivateHttpServer ( server ) {}
+
+    _initPublicHttpServer ( server ) {
+        server.webpack( "/", new URL( "../app/www", import.meta.url ) );
     }
 }
