@@ -10,7 +10,12 @@ cron:
     timezone: ~
     query: "VACUUM ANALYZE"
 
-  reindex:
+  reindex-database:
     cron: "0 0 * * 0" # Sunday, 00:00
     timezone: ~
-    query: "REINDEX DATABASE CONCURRENTLY <DATABASE_NAME>; REINDEX SYSTEM <DATABASE_NAME>"
+    query: "REINDEX DATABASE CONCURRENTLY <DATABASE_NAME>"
+
+  reindex-system:
+    cron: "0 2 * * 0" # Sunday, 02:00
+    timezone: ~
+    query: "REINDEX SYSTEM <DATABASE_NAME>"
