@@ -13,4 +13,4 @@ cron:
   reindex:
     cron: "0 0 * * 0" # Sunday, 00:00
     timezone: ~
-    query: "REINDEX DATABASE CONCURRENTLY <DATABASE_NAME>"
+    query: "REINDEX DATABASE CONCURRENTLY <DATABASE_NAME>; REINDEX SYSTEM <DATABASE_NAME>"
