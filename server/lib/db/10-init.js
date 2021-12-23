@@ -4,6 +4,7 @@ export default sql`
 
 -- extensions
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
+CREATE EXTENSION IF NOT EXISTS softvisio_locks;
 -- CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;
 
 -- currency
