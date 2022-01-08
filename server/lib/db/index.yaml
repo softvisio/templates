@@ -5,17 +5,11 @@ patch: ~
 emits: []
 
 cron:
-  vacuum:
-    cron: "0 0 * * 1" # Monday, 00:00
-    timezone: ~
-    query: "VACUUM ANALYZE"
-
-  reindex-database:
+  maintenance:
     cron: "0 0 * * 0" # Sunday, 00:00
     timezone: ~
-    query: "REINDEX DATABASE CONCURRENTLY <DATABASE_NAME>"
-
-  reindex-system:
-    cron: "0 2 * * 0" # Sunday, 02:00
-    timezone: ~
-    query: "REINDEX SYSTEM <DATABASE_NAME>"
+    query: |-
+      REINDEX DATABASE CONCURRENTLY CURRENT_DATABASE;
+      REINDEX SYSTEM CURRENT_DATABASE;
+      VACUUM ANALYZE;
+    as_superuser: true
