@@ -1,10 +1,9 @@
-import Base from "#core/app/threads/base";
+import Thread from "#core/app/thread";
 import CONST from "#lib/const";
 
 // import sql from "#core/sql";
-// import CONST from "#lib/const";
 
-export default class extends Base {
+export default class extends Thread {
     constructor ( ...args ) {
         super( CONST );
     }
