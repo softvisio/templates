@@ -1,4 +1,4 @@
-const config = {
+export default {
     "apiEnabled": true,
     "rpcEnabled": false,
     "publicHttpServerEnabled": null,
@@ -35,5 +35,3 @@ const config = {
         },
     },
 };
-
-export default config;
