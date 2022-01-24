@@ -1,5 +1,6 @@
 title: Test
 permissions: ["*"]
+emits: []
 
 methods:
   test:
