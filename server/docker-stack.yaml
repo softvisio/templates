@@ -33,7 +33,7 @@ services:
     #   NODE_ENV: development
 
     configs:
-      - { source: env.yaml, target: /var/local/package/env.production.local.yaml }
+      - { source: env.yaml, target: /var/local/package/env.yaml }
 
     networks: [private]
 
