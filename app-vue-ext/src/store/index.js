@@ -1,5 +1,5 @@
 import Store from "#vue/store";
 
-// import CONST from "@/const";
+// import constants from "@/constants";
 
 export default class extends Store {}

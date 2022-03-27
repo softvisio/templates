@@ -13,7 +13,7 @@ import Title from "#vue/components/title/titlebar";
 import UsersDialog from "#vue/components/users/dialog";
 import ProfileDialog from "./private/profile/dialog";
 
-// import CONST from "@/const";
+// import constants from "@/constants";
 
 export default {
     "components": { Title },
