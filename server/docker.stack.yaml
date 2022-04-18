@@ -7,7 +7,7 @@ version: "3.9"
 
 services:
   <NAME>:
-    image: zerocluster/<NAME>
+    image: ghcr.io/zerocluster/<NAME>
     init: true
     stop_grace_period: 5m
 
