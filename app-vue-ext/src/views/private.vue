@@ -1,22 +1,22 @@
 <template>
     <ext-panel layout="fit" scrollable="true">
-        <Title ref="title" @showProfileDialog="showProfileDialog">
+        <AppTitle ref="title" @showProfileDialog="showProfileDialog">
             <template #menuTop>
                 <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
             </template>
-        </Title>
+        </AppTitle>
     </ext-panel>
 </template>
 
 <script>
-import Title from "#vue/components/title/titlebar";
+import AppTitle from "#vue/components/app-title";
 import UsersDialog from "#vue/components/users/dialog";
 import ProfileDialog from "./private/profile/dialog";
 
 // import constants from "@/constants";
 
 export default {
-    "components": { Title },
+    "components": { AppTitle },
 
     "computed": {
         isAdmin () {
