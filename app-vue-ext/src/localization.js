@@ -1,10 +1,10 @@
-import Localization from "#vue/localization";
+import Localization from "#lib/localization";
 
 class Local extends Localization {
 
-    // protected
-    async _loadLocale ( locale ) {
-        return import( "#resources/locales/" + locale );
+    // static
+    static async _loadLocale ( locale ) {
+        return import( "#resources/locales/" + locale + ".po" );
     }
 }
 
