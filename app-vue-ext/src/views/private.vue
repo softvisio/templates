@@ -1,6 +1,6 @@
 <template>
     <ext-panel layout="fit" scrollable="true">
-        <AppTitle ref="title" @showProfileDialog="showProfileDialog">
+        <AppTitle ref="title" @showAccountDialog="showAccountDialog">
             <template #menuTop>
                 <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
             </template>
@@ -11,7 +11,7 @@
 <script>
 import AppTitle from "#vue/components/app-title";
 import UsersDialog from "#vue/components/users/dialog";
-import ProfileDialog from "./private/profile/dialog";
+import AccountDialog from "./private/account/dialog";
 
 // import constants from "@/constants";
 
@@ -33,8 +33,8 @@ export default {
             cmp.ext.show();
         },
 
-        async showProfileDialog () {
-            const cmp = await this.$mount( ProfileDialog );
+        async showAccountDialog () {
+            const cmp = await this.$mount( AccountDialog );
 
             cmp.ext.show();
         },

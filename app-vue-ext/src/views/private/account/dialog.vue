@@ -1,5 +1,5 @@
 <template>
-    <ProfileDialog>
+    <AccountDialog>
         <template #top>
             <!-- <ext-panel title="General Settings"> -->
             <!--     <ext-toolbar docked="top" :hidden="titles"> -->
@@ -12,13 +12,13 @@
         </template>
 
         <template #bottom/>
-    </ProfileDialog>
+    </AccountDialog>
 </template>
 
 <script>
-import ProfileDialog from "#vue/components/profile/dialog";
+import AccountDialog from "#vue/components/account/dialog";
 
 export default {
-    "components": { ProfileDialog },
+    "components": { AccountDialog },
 };
 </script>
