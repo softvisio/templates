@@ -2,7 +2,7 @@
     <AccountDialog>
         <template #top>
             <!-- <ext-panel title="General Settings"> -->
-            <!--     <ext-toolbar docked="top" :hidden="titles"> -->
+            <!--     <ext-toolbar docked="top"> -->
             <!--         <ext&#45;container html="General Settings"/> -->
             <!--     </ext-toolbar> -->
             <!--     <ext-fieldset defaults='{"labelAlign":"left","labelWidth":250}'> -->
