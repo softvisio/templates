@@ -9,6 +9,6 @@ CREATE TABLE task (
     id int8 PRIMARY KEY DEFAULT gen_object_id( ${constrants.objects.task.id}, 'task_id_seq' )
 );
 
-CREATE TRIGGER task_after_delete AFTER DELETE ON task FOR EACH ROW EXECUTE PROCEDURE object_after_delete_trigger();
+CREATE TRIGGER task_after_delete AFTER DELETE ON task FOR EACH ROW EXECUTE FUNCTION object_after_delete_trigger();
 
 `;
