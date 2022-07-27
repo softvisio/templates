@@ -28,6 +28,6 @@ export default class extends App {
     _initPrivateHttpServer ( server ) {}
 
     _initPublicHttpServer ( server ) {
-        server.webpack( "/", new URL( "../app/www", import.meta.url ) );
+        server.webpack( "/", new URL( "../frontend/www", import.meta.url ) );
     }
 }
