@@ -2,7 +2,7 @@
     <ext-panel layout="fit" scrollable="true">
         <AppTitle ref="title" @showAccountDialog="showAccountDialog">
             <template #menuTop>
-                <ext-button iconCls="fas fa-users" text="Users" textAlign="left" :hidden="!isAdmin" @tap="showUsersDialog"/>
+                <ext-button :hidden="!isAdmin" iconCls="fas fa-users" text="Users" textAlign="left" @tap="showUsersDialog"/>
             </template>
         </AppTitle>
     </ext-panel>
