@@ -17,7 +17,7 @@ export default {
             "basePermissions": [
 
                 //
-                "/v1/object-users/*",
+                "/v1/acl/*",
                 "/v1/project/*",
             ],
             "roles": {
@@ -27,7 +27,7 @@ export default {
                     "permissions": [
 
                         //
-                        "/v1/object-users/*",
+                        "/v1/acl/*",
                         "/v1/project/*",
                     ],
                 },
