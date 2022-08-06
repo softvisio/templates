@@ -13,11 +13,33 @@ export default {
     },
 
     "objects": {
-        "task": {
-            "id": 0,
+        "project": {
+            "basePermissions": [
+
+                //
+                "/v1/object-users/*",
+                "/v1/project/*",
+            ],
             "roles": {
-                "admin": { "name": "Administrator", "description": "Task administrator. Full access.", "canEditRoles": true },
-                "user": { "name": "User", "description": "Task user. Read only." },
+                "admin": {
+                    "name": "Administrator",
+                    "description": "Project administrator. Full access.",
+                    "permissions": [
+
+                        //
+                        "/v1/object-users/*",
+                        "/v1/project/*",
+                    ],
+                },
+                "manager": {
+                    "name": "Manager",
+                    "description": "Project manager. Limited access.",
+                    "permissions": [
+
+                        //
+                        "/v1/project/*",
+                    ],
+                },
             },
         },
     },
