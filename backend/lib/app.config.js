@@ -12,7 +12,7 @@ export default {
         } ),
     },
 
-    "objects": {
+    "acl": {
         "project": {
             "basePermissions": [
 
