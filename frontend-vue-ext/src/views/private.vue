@@ -20,7 +20,7 @@ export default {
 
     "computed": {
         isAdmin () {
-            return this.$store.session.hasPermissions( "admin" );
+            return this.$store.session.hasRoles( "admin" );
         },
     },
 
