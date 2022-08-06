@@ -4,7 +4,7 @@ export default {
     "publicHttpServerEnabled": null,
     "privateHttpServerEnabled": null,
 
-    "permissions": {
+    "roles": {
         "admin": Object.freeze( {
             "name": "Administrator",
             "description": "System administrator",
