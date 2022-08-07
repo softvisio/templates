@@ -14,12 +14,6 @@ export default {
 
     "acl": {
         "project": {
-            "basePermissions": [
-
-                //
-                "/v1/acl/*",
-                "/v1/project/*",
-            ],
             "roles": {
                 "admin": {
                     "name": "Administrator",
