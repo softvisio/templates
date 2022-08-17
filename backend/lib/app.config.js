@@ -13,27 +13,35 @@ export default {
     },
 
     "acl": {
-        "project": {
-            "roles": {
-                "admin": {
-                    "name": "Administrator",
-                    "description": "Project administrator. Full access.",
-                    "permissions": [
-
-                        //
-                        "/v1/acl/*",
-                        "/v1/project/*",
-                    ],
+        "types": {
+            "project": {
+                "roles": {
+                    "admin": {
+                        "name": "Administrator",
+                        "description": "Bot administrator. Full access.",
+                        "permissions": {
+                            "/*": true,
+                            "/v1/acl/*": true,
+                        },
+                    },
+                    "manager": {
+                        "name": "Manager",
+                        "description": "Bot manager. Limited access.",
+                        "permissions": {
+                            "/*": true,
+                            "/v1/acl/*": false,
+                        },
+                    },
                 },
-                "manager": {
-                    "name": "Manager",
-                    "description": "Project manager. Limited access.",
-                    "permissions": [
-
-                        //
-                        "/v1/project/*",
-                    ],
-                },
+            },
+        },
+        "objectTypes": {
+            "project": {
+                "isAclObject": true,
+                "resolver": null,
+            },
+            "task": {
+                "resolver": `SELECT project_id AS id FROM task WHERE id = ?`,
             },
         },
     },

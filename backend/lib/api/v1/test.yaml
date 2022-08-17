@@ -9,3 +9,4 @@ methods:
       - name: args
         schema:
           type: string
+          aclObjectType: project
