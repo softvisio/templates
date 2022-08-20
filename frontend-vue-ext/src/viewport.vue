@@ -11,8 +11,8 @@ export default {
     },
 
     "methods": {
-        async onRoute ( route ) {
-            Viewport.methods.onRoute.call( this, route );
+        async _onRoute ( route ) {
+            Viewport.methods._onRoute.call( this, route );
         },
     },
 };
