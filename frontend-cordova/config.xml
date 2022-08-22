@@ -17,7 +17,8 @@
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-firebasex" spec="git+https://github.com/dpa99c/cordova-plugin-firebasex.git#cli_build">
         <variable name="ANDROID_FIREBASE_CONFIG_FILEPATH" value="resources/android/google-services.json" />
-        <variable name="IOS_FIREBASE_CONFIG_FILEPATH" value="resources/ios/GoogleService-Info.plist" />
+		<variable name="IOS_FIREBASE_CONFIG_FILEPATH" value="resources/ios/GoogleService-Info.plist" />
+		<variable name="FIREBASE_FCM_AUTOINIT_ENABLED" value="false" />
     </plugin>
 
     <!-- android -->
