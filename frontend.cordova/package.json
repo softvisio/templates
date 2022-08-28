@@ -1,4 +1,25 @@
 {
     "private": true,
-    "type": "commonjs"
+    "devDependencies": {
+        "cordova-android": "^11.0.0",
+        "cordova-ios": "^6.2.0",
+        "cordova-plugin-device": "^2.1.0",
+        "cordova-plugin-firebasex": "github:dpa99c/cordova-plugin-firebasex#cli_build",
+        "cordova-plugin-network-information": "^3.0.0"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-device": {},
+            "cordova-plugin-network-information": {},
+            "cordova-plugin-firebasex": {
+                "ANDROID_FIREBASE_CONFIG_FILEPATH": "resources/android/google-services.json",
+                "IOS_FIREBASE_CONFIG_FILEPATH": "resources/ios/GoogleService-Info.plist",
+                "FIREBASE_FCM_AUTOINIT_ENABLED": "false",
+                "ANDROID_ICON_ACCENT": "#FF00FFFF",
+                "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "false",
+                "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "false",
+                "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "false"
+            }
+        }
+    }
 }

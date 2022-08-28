@@ -13,18 +13,6 @@
     -->
     <preference name="DisallowOverscroll" value="true" />
 
-    <plugin name="cordova-plugin-device" />
-    <plugin name="cordova-plugin-network-information" />
-    <plugin name="cordova-plugin-firebasex" spec="github:dpa99c/cordova-plugin-firebasex#cli_build">
-        <variable name="ANDROID_FIREBASE_CONFIG_FILEPATH" value="resources/android/google-services.json" />
-        <variable name="IOS_FIREBASE_CONFIG_FILEPATH" value="resources/ios/GoogleService-Info.plist" />
-        <variable name="FIREBASE_FCM_AUTOINIT_ENABLED" value="false" />
-        <variable name="ANDROID_ICON_ACCENT" value="#FF00FFFF" />
-        <variable name="FIREBASE_ANALYTICS_COLLECTION_ENABLED" value="false" />
-        <variable name="FIREBASE_PERFORMANCE_COLLECTION_ENABLED" value="false" />
-        <variable name="FIREBASE_CRASHLYTICS_COLLECTION_ENABLED" value="false" />
-    </plugin>
-
     <!-- android -->
 	<platform name="android">
 
