@@ -1,9 +1,3 @@
-# common
-/data/
-/wiki/
-/env.local.yaml
-/env.*.local.yaml
-
 # cordova
 /hooks/
 /platforms/
