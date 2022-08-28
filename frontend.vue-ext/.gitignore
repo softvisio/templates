@@ -4,11 +4,6 @@
 /env.local.yaml
 /env.*.local.yaml
 
-# cordova
-/hooks/
-/platforms/
-/plugins/
-
 # node
 /node_modules/
 
