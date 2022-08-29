@@ -1,10 +1,11 @@
 {
+    "version": "0.0.0",
     "private": true,
     "devDependencies": {
         "cordova-android": "^11.0.0",
         "cordova-ios": "^6.2.0",
         "cordova-plugin-device": "^2.1.0",
-        "cordova-plugin-firebasex": "github:dpa99c/cordova-plugin-firebasex#cli_build",
+        "cordova-plugin-firebasex": "^14.2.1",
         "cordova-plugin-network-information": "^3.0.0"
     },
     "cordova": {
