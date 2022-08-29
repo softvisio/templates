@@ -28,5 +28,8 @@
     },
     "devDependencies": {
         "@softvisio/vue": "^6.0.0"
-    }
+    },
+    "subPackages": [
+        "cordova"
+    ]
 }
