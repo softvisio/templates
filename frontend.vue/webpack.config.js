@@ -1,5 +1,11 @@
-import config from "#vue/resources/webpack/default.config.js";
+export * from "#vue/resources/webpack/default.config.js";
 
-config.get( "main" ).addSchema( "#resources/schemas/app.env.schema.yaml", import.meta.url );
+import { Main as Super } from "#vue/resources/webpack/default.config.js";
 
-export default config;
+export class Main extends Super {
+    constructor ( options ) {
+        super( options );
+
+        this.addSchema( "#resources/schemas/app.env.schema.yaml", import.meta.url );
+    }
+}
