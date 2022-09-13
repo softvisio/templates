@@ -1,4 +1,8 @@
 export default {
+    "locales": ["en-GB"], // "en-US","uk","ru"
+    "defaultLocale": "en-GB",
+    "currency": "USD",
+
     "apiEnabled": true,
     "rpcEnabled": false,
     "publicHttpServerEnabled": null,
