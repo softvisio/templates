@@ -8,11 +8,11 @@
         <meta http-equiv="Content-Security-Policy" content="default-src * gap://*; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; media-src * blob:; img-src * filesystem: data: blob:" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <title><%= APP_TITLE %></title>
+        <title><%= app.title %></title>
 
         <link rel="icon" href="favicon.ico" />
 
-        <% if ( WEBPACK_BUILD_CORDOVA ) { %>
+        <% if ( env.WEBPACK_BUILD_CORDOVA ) { %>
         <script src="cordova.js" type="text/javascript" integrity="" crossorigin="anonymous"></script>
         <% } %>
     </head>
