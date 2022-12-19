@@ -19,7 +19,12 @@
     "imports": {
         "#core/*": "@softvisio/core/*",
         "#resources/*": "./resources/*",
-        "#vue/*": "@softvisio/vue/*"
+        "#vue/*": "@softvisio/vue/*",
+        "#src/*": [
+            "./src/*.vue",
+            "./src/*.js",
+            "./src/*.cjs"
+        ]
     },
     "scripts": {
         "build": "softvisio-webpack build --mode=production",
