@@ -1,0 +1,38 @@
+dependencies:
+  - "@softvisio/core"
+
+components:
+  dbh: ~
+
+  # cluster:
+  #   id: playground
+
+  # services:
+  #   core: ws://devel:10000/api
+  #   datasets: ws://devel:10001/api?clearCacheOn=disconnect,update
+
+  api:
+    locales: [en-GB, en-US, uk, ru]
+
+    acl:
+      default:
+        administrator:
+          name: Administrator
+          description: Project administrator
+          permissions:
+            - acl:create
+            - acl:read
+            - acl:update
+            - acl:delete
+            - admin:create
+            - admin:read
+            - admin:update
+            - admin:delete
+
+  rpc: ~
+
+  threads: ~
+
+  webpack: ~
+
+config: ~

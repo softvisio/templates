@@ -1,33 +1,37 @@
 import App from "#core/app";
-import config from "#lib/app.config";
 
 export default class extends App {
-    constructor () {
-        super( import.meta.url, config );
+
+    // propeties
+    get location () {
+        return import.meta.url;
     }
 
-    // static
-    static cli () {
-        return {
-            "options": {},
-            "arguments": {},
-        };
+    // public
+    async getHealthCheckStatus () {
+        return super.getHealthCheckStatus();
     }
 
     // protected
-    _initThreads () {
-        return {
-            "worker": {
-                "num": 1,
-                "path": new URL( "./threads/worker.js", import.meta.url ),
-                "arguments": null,
-            },
-        };
+    async _init () {
+        var res;
+
+        res = await super._init();
+        if ( !res.ok ) return res;
+
+        // res = await this.threads.run( {
+        //     "worker": {
+        //         "num": 1,
+        //         "module": new URL( "./threads/worker.js", import.meta.url ),
+        //         "arguments": null,
+        //     },
+        // } );
+        // if ( !res.ok ) return res;
+
+        return result( 200 );
     }
 
-    _initPrivateHttpServer ( server ) {}
-
-    _initPublicHttpServer ( server ) {
-        server.webpack( "/", new URL( "../frontend/www", import.meta.url ) );
+    async _run () {
+        return super._run();
     }
 }
