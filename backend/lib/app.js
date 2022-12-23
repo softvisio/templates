@@ -7,11 +7,6 @@ export default class extends App {
         return import.meta.url;
     }
 
-    // public
-    async getHealthCheckStatus () {
-        return super.getHealthCheckStatus();
-    }
-
     // protected
     async _init () {
         var res;
@@ -33,5 +28,9 @@ export default class extends App {
 
     async _run () {
         return super._run();
+    }
+
+    async _getHealthCheckStatus () {
+        return super.getHealthCheckStatus();
     }
 }
