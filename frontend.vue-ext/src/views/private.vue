@@ -1,8 +1,8 @@
 <template>
     <ext-panel layout="fit" scrollable="true">
         <AppTitle ref="title" @showAccountDialog="showAccountDialog">
-            <template #menuTop>
-                <ext-button :hidden="!isAdmin" iconCls="fas fa-users" text="Users" textAlign="left" @tap="showUsersDialog"/>
+            <template #menuBottom>
+                <ext-button :hidden="!isAdministrator" iconCls="fas fa-users" text="Users" textAlign="left" @tap="showUsersDialog"/>
             </template>
         </AppTitle>
     </ext-panel>
@@ -18,10 +18,10 @@ import AccountDialog from "./private/account/dialog";
 export default {
     "components": { AppTitle },
 
-    "computed": {
-        isAdmin () {
-            return this.$store.session.hasRoles( "admin" );
-        },
+    data () {
+        return {
+            "isAdministrator": this.$app.hasPermissions( "admin:read" ),
+        };
     },
 
     "methods": {
