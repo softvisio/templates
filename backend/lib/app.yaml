@@ -5,7 +5,7 @@ components:
   dbh: ~
 
   # cluster:
-  #   id: playground
+  #   id: test
 
   # services:
   #   core: ws://devel:10000/api
@@ -13,21 +13,6 @@ components:
 
   api:
     locales: [en-GB, en-US, uk, ru]
-
-    acl:
-      default:
-        administrator:
-          name: Administrator
-          description: Project administrator
-          permissions:
-            - acl:create
-            - acl:read
-            - acl:update
-            - acl:delete
-            - admin:create
-            - admin:read
-            - admin:update
-            - admin:delete
 
   rpc: ~
 
