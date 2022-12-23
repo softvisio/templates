@@ -17,10 +17,6 @@ export default class extends App {
         return result( 200 );
     }
 
-    async _run () {
-        return super._run();
-    }
-
     async _runThreads () {
         return super._runThreads();
 
@@ -31,6 +27,10 @@ export default class extends App {
         //         "arguments": null,
         //     },
         // } );
+    }
+
+    async _run () {
+        return super._run();
     }
 
     async _getHealthCheckStatus () {
