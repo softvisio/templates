@@ -1,4 +1,4 @@
-import App from "#vue";
+import App from "#vue/app";
 
 const app = await App.new();
 
