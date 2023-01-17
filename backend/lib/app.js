@@ -18,19 +18,18 @@ export default class extends App {
     }
 
     async _runThreads () {
-        return super._runThreads();
+        return this.threads.run( {
 
-        // return this.threads.run( {
-        //     "worker": {
-        //         "num": 1,
-        //         "module": new URL( "threads/worker.js", import.meta.url ),
-        //         "arguments": [
-        //             {
-        //                 "dbh": this.dbh,
-        //             },
-        //         ],
-        //     },
-        // } );
+            // "worker": {
+            //     "num": 1,
+            //     "module": new URL( "threads/worker.js", import.meta.url ),
+            //     "arguments": [
+            //         {
+            //             "dbh": this.dbh,
+            //         },
+            //     ],
+            // },
+        } );
     }
 
     async _run () {
