@@ -24,7 +24,11 @@ export default class extends App {
         //     "worker": {
         //         "num": 1,
         //         "module": new URL( "threads/worker.js", import.meta.url ),
-        //         "arguments": [{ "dbh": this.dbh }],
+        //         "arguments": [
+        //             {
+        //                 "dbh": this.dbh,
+        //             },
+        //         ],
         //     },
         // } );
     }
