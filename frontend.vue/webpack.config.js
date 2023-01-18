@@ -1,1 +1,1 @@
-export * from "#vue/resources/webpack/default.config.js";
+export * from "#vue/webpack/default";
