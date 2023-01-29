@@ -19,7 +19,6 @@
     "imports": {
         "#core/*": "@softvisio/core/*",
         "#resources/*": "./resources/*",
-        "#vue/*": "@softvisio/vue/*",
         "#src/*": [
             "./src/*.vue",
             "./src/*.js",
