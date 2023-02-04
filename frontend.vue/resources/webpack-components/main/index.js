@@ -2,8 +2,8 @@ import WebpackComponent from "@softvisio/vue/webpack-components/main";
 
 export default class extends WebpackComponent {
 
-    // properties
-    get schemas () {
+    // static
+    static get schemas () {
         return [
 
             //
