@@ -11,4 +11,4 @@ cron:
     cron: "0 0 * * 0" # Sunday, 00:00
     timezone: ~
     query: VACUUM ANALYZE
-    run_as_superuser: true
+    runAsSuperuser: true
