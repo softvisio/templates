@@ -1,5 +1,3 @@
-import App from "#vue/app";
-
-const app = await App.new();
+import app from "@/app";
 
 app.mount();
