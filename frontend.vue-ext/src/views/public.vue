@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import AuthPanel from "#vue/components/auth/panel";
+import AuthPanel from "#vue/components/authentication/panel";
 
 export default {
     "components": { AuthPanel },
