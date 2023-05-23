@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import AppTitle from "#vue/components/app-title";
+import AppTitle from "#vue/components/application/title";
 import AccountDialog from "./private/account/dialog";
 
 // import constants from "@/constants";
