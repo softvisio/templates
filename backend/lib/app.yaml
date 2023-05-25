@@ -5,14 +5,12 @@ components:
   api:
     locales: [en-GB, en-US, uk, ru]
 
-  rpc: ~
+  rpc: true
 
-  services: ~
+  services: true
 
-  threads: ~
+  telegramNotificationsBot: true
 
-  telegramNotificationsBot: ~
-
-  webpack: ~
+  webpack: true
 
 config: ~
