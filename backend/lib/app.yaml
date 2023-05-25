@@ -2,14 +2,16 @@ dependencies:
   - "@softvisio/core"
 
 components:
-  services: ~
-
   api:
     locales: [en-GB, en-US, uk, ru]
 
   rpc: ~
 
+  services: ~
+
   threads: ~
+
+  telegramNotificationsBot: ~
 
   webpack: ~
 
