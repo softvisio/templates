@@ -2,14 +2,7 @@ dependencies:
   - "@softvisio/core"
 
 components:
-  dbh: ~
-
-  # cluster:
-  #   id: test
-
-  # services:
-  #   core: ws://devel:10000/api
-  #   datasets: ws://devel:10001/api?clearCacheOn=disconnect,update
+  services: ~
 
   api:
     locales: [en-GB, en-US, uk, ru]
