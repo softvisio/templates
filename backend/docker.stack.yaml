@@ -32,6 +32,8 @@ services:
     # environment:
     #   NODE_ENV: development
 
+    command: --service default
+
     configs:
       - { source: env.yaml, target: /var/local/package/env.yaml }
 
