@@ -9,11 +9,10 @@ export default class extends App {
 
     // protected
     async _init () {
-        var res;
+        return result( 200 );
+    }
 
-        res = await super._init();
-        if ( !res.ok ) return res;
-
+    async _run () {
         return result( 200 );
     }
 
@@ -30,13 +29,5 @@ export default class extends App {
             //     ],
             // },
         } );
-    }
-
-    async _run () {
-        return super._run();
-    }
-
-    async _getHealthCheckStatus () {
-        return super.getHealthCheckStatus();
     }
 }
