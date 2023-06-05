@@ -1,5 +1,10 @@
-type: object
-properties: {}
+- $id: env
+  type: object
+  properties: {}
+  required: []
 
-required: []
-additionalProperties: false
+- $id: config
+  type: object
+  properties: {}
+  additionalProperties: false
+  required: []
