@@ -20,7 +20,7 @@ export default class extends App {
         return this.threads.run( {
 
             // "worker": {
-            //     "num": 1,
+            //     "numberOfThreads": 1,
             //     "module": new URL( "threads/worker.js", import.meta.url ),
             //     "arguments": [
             //         {
