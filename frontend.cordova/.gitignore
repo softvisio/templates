@@ -1,10 +1,10 @@
 # cordova
-/hooks/
-/platforms/
-/plugins/
+/hooks
+/platforms
+/plugins
 
 # node
-/node_modules/
+/node_modules
 
 # webpack
-/www/
+/www

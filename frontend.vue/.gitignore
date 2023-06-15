@@ -1,11 +1,11 @@
 # common
-/data/
-/wiki/
+/data
+/wiki
 /env.local.yaml
 /env.*.local.yaml
 
 # node
-/node_modules/
+/node_modules
 
 # webpack
-/www/
+/www
