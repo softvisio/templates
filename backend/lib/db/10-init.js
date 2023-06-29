@@ -10,7 +10,7 @@ CREATE EXTENSION IF NOT EXISTS softvisio_locks;
 -- currency
 -- DO $$ BEGIN
 --     IF to_regtype( 'int53' ) IS NULL THEN
---         CREATE DOMAIN currency AS decimal ( 12, 4 ) NOT NULL DEFAULT 0;
+--         CREATE DOMAIN currency AS numeric( 12, 4 ) NOT NULL DEFAULT 0;
 --     END IF;
 -- END $$;
 
