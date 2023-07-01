@@ -7,8 +7,8 @@ emits: []
 locks: []
 
 cron:
-  maintenance:
-    cron: "0 0 * * 0" # Sunday, 00:00
-    timezone: ~
-    query: VACUUM ANALYZE
-    runAsSuperuser: true
+  ~
+  # maintenance:
+  #   cron: "0 0 * * 0" # Sunday, 00:00
+  #   timezone: ~
+  #   query: VACUUM ANALYZE
