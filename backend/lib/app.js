@@ -12,12 +12,12 @@ export default class extends App {
         return result( 200 );
     }
 
-    async _run () {
+    async _start () {
         return result( 200 );
     }
 
-    async _runThreads () {
-        return this.threads.run( {
+    async _startThreads () {
+        return this.threads.start( {
 
             // "worker": {
             //     "numberOfThreads": 1,
