@@ -14,10 +14,9 @@
     <preference name="DisallowOverscroll" value="true" />
 
     <!-- android -->
-	<platform name="android">
-
-		<!-- required for androidx based plugins (cordova-plugin-firebasex)  -->
-		<preference name="AndroidXEnabled" value="true" />
+    <platform name="android">
+        <!-- required for androidx based plugins (cordova-plugin-firebasex)  -->
+        <preference name="AndroidXEnabled" value="true" />
 
         <icon density="ldpi" src="resources/android/icons/ldpi.png" />
         <icon density="mdpi" src="resources/android/icons/mdpi.png" />
