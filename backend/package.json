@@ -21,6 +21,12 @@
         "#lib/*": "./lib/*.js",
         "#resources/*": "./resources/*"
     },
+    "files": [
+        "/bin",
+        "/lib",
+        "/resources",
+        "/src"
+    ],
     "scripts": {
         "dev": "node bin/main.js --mode=development",
         "docker": "node bin/main.js"
