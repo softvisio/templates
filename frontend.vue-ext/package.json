@@ -25,12 +25,6 @@
             "./src/*.cjs"
         ]
     },
-    "files": [
-        "/bin",
-        "/lib",
-        "/resources",
-        "/src"
-    ],
     "scripts": {
         "build": "softvisio-webpack build --mode=production",
         "build-cordova": "softvisio-webpack build --mode=production --cordova",
