@@ -3,9 +3,10 @@ dependencies:
 
 services:
   api:
-    webpack: true
-    api: true
-    telegramNotificationsBot: true
+    components:
+      webpack: true
+      api: true
+      telegramNotificationsBot: true
 
 defaultService: api
 
