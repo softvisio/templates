@@ -1,10 +1,8 @@
-# cordova
-/hooks
-/platforms
-/plugins
+node_modules
 
-# node
-/node_modules
+/data
+/wiki
+/env.local.yaml
+/env.*.local.yaml
 
-# webpack
 /www
