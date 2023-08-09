@@ -27,6 +27,7 @@ services:
 
     volumes:
       - { type: tmpfs, target: /dev/shm, tmpfs: { size: 1073741824 } }
+      - { type: volume, source: <NAME>, target: /var/local/package/data }
 
     build: .
 
@@ -35,3 +36,6 @@ configs:
 
 networks:
   main: { external: true }
+
+volumes:
+  <NAME>: { name: <NAME> }
