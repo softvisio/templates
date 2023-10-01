@@ -18,7 +18,7 @@ services:
       labels:
         nginx.http.server-names: ""
 
-    command: ""
+    command: run
 
     configs:
       - { source: env.yaml, target: /var/local/package/env.yaml }
