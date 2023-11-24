@@ -10,8 +10,8 @@ export default {
     },
 
     "methods": {
-        async _onRoute ( route ) {
-            return Viewport.methods._onRoute.call( this, route );
+        async _route () {
+            return Viewport.methods._route.call( this );
         },
     },
 };
