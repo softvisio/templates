@@ -5,8 +5,8 @@ export default {
     "extends": Viewport,
 
     created () {
-        this.publicView = () => import( /* webpackChunkName: "public" */ "@/views/public.vue" );
-        this.privateView = () => import( /* webpackChunkName: "private" */ "@/views/private.vue" );
+        this.publicView = () => import( /* webpackChunkName: "public" */ "@/public.vue" );
+        this.privateView = () => import( /* webpackChunkName: "private" */ "@/private.vue" );
     },
 
     "methods": {
