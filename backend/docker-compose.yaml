@@ -15,8 +15,8 @@ services:
       replicas: 1
       placement:
         max_replicas_per_node: 1
-      labels:
-        nginx.http.server-names: ""
+      # labels:
+      #   nginx.1: http?serverName=
 
     command: run
 
