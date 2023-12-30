@@ -16,7 +16,7 @@ services:
       placement:
         max_replicas_per_node: 1
       # labels:
-      #   nginx: http?serverName=
+      #   nginx: upstreamPort=80&port=80,443&serverName=
 
     command: run
 
