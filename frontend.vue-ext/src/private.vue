@@ -11,8 +11,6 @@
 <script>
 import AppTitle from "#vue/components/application/title";
 
-// import constants from "@/constants";
-
 export default {
     "components": { AppTitle },
 
