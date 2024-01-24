@@ -21,7 +21,7 @@ export default {
             var res = await this.$app.signin( { username, password } );
 
             if ( !res.ok ) {
-                alert( `Auth problem: ${res.toString()}` );
+                alert( `Auth problem: ${ res.toString() }` );
             }
         },
 
