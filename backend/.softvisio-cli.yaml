@@ -11,10 +11,6 @@ docker:
 docs:
   location: docs
 
-  logo: false
-
-  types: {}
-
   externalTypes:
     - softvisio-node/core
     - softvisio-node/result
