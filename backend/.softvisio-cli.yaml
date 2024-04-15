@@ -16,8 +16,8 @@ docs:
   types: {}
 
   externalTypes:
-    - https://softvisio-node.github.io/core/
-    - https://softvisio-node.github.io/result/
+    - softvisio-node/core
+    - softvisio-node/result
 
   aliases:
     /api: https://raw.githubusercontent.com/softvisio-node/core/main/docs/api.md
