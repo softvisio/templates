@@ -8,6 +8,7 @@ version: "3.9"
 services:
   <NAME>:
     image: ghcr.io/zerocluster/<NAME>
+    depends_on: [postgresql]
     init: true
     stop_grace_period: 5m
 
@@ -21,7 +22,7 @@ services:
     command: run
 
     secrets:
-      - { source: env.yaml, target: /var/local/package/env.yaml }
+      - { source: <NAME>, target: /var/local/package/env.yaml }
 
     networks: [main]
 
@@ -32,7 +33,7 @@ services:
     build: .
 
 secrets:
-  env.yaml: { file: env.yaml }
+  <NAME>: { file: env.yaml }
 
 networks:
   main: { external: true }
