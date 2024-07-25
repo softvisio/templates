@@ -20,7 +20,7 @@ services:
     command: run
 
     secrets:
-      - { source: <NAME>, target: /var/local/package/env.yaml }
+      - { source: <NAME>_env.yaml, target: /var/local/package/env.yaml }
 
     networks: [network]
 
@@ -31,7 +31,7 @@ services:
     build: .
 
 secrets:
-  <NAME>: { file: env.yaml }
+  <NAME>_env.yaml: { file: env.yaml }
 
 networks:
   network:
@@ -39,4 +39,4 @@ networks:
     external: true
 
 volumes:
-  <NAME>: { name: <NAME> }
+  <NAME>: ~
