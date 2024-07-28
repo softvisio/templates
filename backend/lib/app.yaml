@@ -6,6 +6,7 @@ services:
     components:
       webpack: true
       api: true
+      rpc: true
       telegramSupportBot: true
 
 defaultService: api
