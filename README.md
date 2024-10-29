@@ -4,7 +4,7 @@ Projects templates.
 
 ## Cordova
 
-In `build.json` set `developmentTeam` id. Get your TeamID from [https://developer.apple.com/account/#/membership](https://developer.apple.com/account/#/membership).
+In `build.json` set `developmentTeam` id. Get your TeamID from <https://developer.apple.com/account/#/membership>.
 
 ### Plugins
 
