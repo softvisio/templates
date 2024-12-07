@@ -1,4 +1,4 @@
 private: false
 
 subPackages:
-  - /cordova
+    - /cordova

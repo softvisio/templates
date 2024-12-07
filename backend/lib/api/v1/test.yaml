@@ -2,10 +2,10 @@ title: Test
 emits: []
 
 methods:
-  test:
-    title: Test method
-    params:
-      - name: args
-        schema:
-          type: string
-          aclObjectType: project
+    test:
+        title: Test method
+        params:
+            - name: args
+              schema:
+                  type: string
+                  aclObjectType: project

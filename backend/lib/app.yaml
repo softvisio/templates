@@ -1,20 +1,20 @@
 dependencies:
-  - "@softvisio/core"
+    - "@softvisio/core"
 
 services:
-  api:
-    components:
-      webpack: true
-      api: true
-      rpc: true
-      telegramSupportBot: true
+    api:
+        components:
+            webpack: true
+            api: true
+            rpc: true
+            telegramSupportBot: true
 
 defaultService: api
 
 templates: ~
 
 components:
-  locales:
-    locales: [en-GB, en-US, uk-UA, ru-RU]
+    locales:
+        locales: [en-GB, en-US, uk-UA, ru-RU]
 
 config: ~
