@@ -7,7 +7,7 @@ emits: []
 locks: []
 
 cron:
-    # maintenance:
-    #   cron: "0 0 * * 0" # Sunday, 00:00
-    #   timezone: ~
-    #   query: ~
+  # maintenance:
+  #   cron: "0 0 * * 0" # Sunday, 00:00
+  #   timezone: ~
+  #   query: ~

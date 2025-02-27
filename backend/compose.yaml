@@ -1,35 +1,35 @@
 services:
-    <NAME>:
-        image: ghcr.io/zerocluster/<NAME>
-        depends_on: [postgresql]
-        init: true
-        stop_grace_period: 5m
+  <NAME>:
+    image: ghcr.io/zerocluster/<NAME>
+    depends_on: [postgresql]
+    init: true
+    stop_grace_period: 5m
 
-        deploy:
-            replicas: 1
-            placement:
-                max_replicas_per_node: 1
-            # labels:
-            #   nginx: upstream=80&servers=443&serverNames=
+    deploy:
+      replicas: 1
+      placement:
+        max_replicas_per_node: 1
+      # labels:
+      #   nginx: upstream=80&servers=443&serverNames=
 
-        command: run
+    command: run
 
-        secrets:
-            - { source: <NAME>_env.yaml, target: /var/local/package/env.yaml }
+    secrets:
+      - { source: <NAME>_env.yaml, target: /var/local/package/env.yaml }
 
-        networks: [network]
+    networks: [network]
 
-        volumes:
-            - { type: tmpfs, target: /dev/shm, tmpfs: { size: 1073741824 } }
-            - { type: volume, source: <NAME>, target: /var/local/package/data }
+    volumes:
+      - { type: tmpfs, target: /dev/shm, tmpfs: { size: 1073741824 } }
+      - { type: volume, source: <NAME>, target: /var/local/package/data }
 
-        build: .
+    build: .
 
 secrets:
-    <NAME>_env.yaml: { file: env.yaml }
+  <NAME>_env.yaml: { file: env.yaml }
 
 networks:
-    network: ~
+  network: ~
 
 volumes:
-    <NAME>: ~
+  <NAME>: ~
