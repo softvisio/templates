@@ -2,7 +2,7 @@
     "name": "templates",
     "version": "0.0.0",
     "private": true,
-    "description": "Softisio Project Templates",
+    "description": "Package templates",
     "keywords": [
         "softvisio",
         "template"
