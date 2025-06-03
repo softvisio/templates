@@ -14,6 +14,9 @@ defaultService: api
 templates: ~
 
 components:
+  env:
+    name: ~
+
   locales:
     locales: [en-GB, en-US, uk-UA, ru-RU]
 
