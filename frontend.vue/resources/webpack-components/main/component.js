@@ -1,4 +1,4 @@
-import WebpackComponent from "@softvisio/vue/webpack-components/main";
+import WebpackComponent from "@c0rejs/vue/webpack-components/main";
 
 export default class extends WebpackComponent {
 

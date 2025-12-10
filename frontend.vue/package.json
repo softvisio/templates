@@ -16,7 +16,7 @@
     "author": "root <root@softvisio.net>",
     "type": "module",
     "imports": {
-        "#core/*": "@softvisio/core/*",
+        "#core/*": "@c0rejs/core/*",
         "#resources/*": "./resources/*",
         "#src/*": {
             "browser": "./src/*",
@@ -35,6 +35,6 @@
         "start": "softvisio-webpack dev --mode=development"
     },
     "devDependencies": {
-        "@softvisio/vue": "^7.0.0"
+        "@c0rejs/vue": "^7.0.0"
     }
 }
