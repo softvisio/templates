@@ -1,5 +1,5 @@
 {
-    "name": "templates",
+    "name": "@softvisio/templates",
     "private": true,
     "description": "Package templates",
     "keywords": [
