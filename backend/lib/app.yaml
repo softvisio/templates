@@ -2,14 +2,14 @@ dependencies:
   - "@corejslib/core"
 
 services:
-  api:
+  main:
     components:
       webpack: true
       api: true
       rpc: true
       telegramSupportBot: true
 
-defaultService: api
+defaultService: main
 
 templates: ~
 
