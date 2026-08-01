@@ -30,9 +30,9 @@
         }
     },
     "scripts": {
-        "build": "softvisio-webpack build --mode=production",
-        "build-cordova": "softvisio-webpack build --mode=production --cordova",
-        "start": "softvisio-webpack dev --mode=development"
+        "build": "cwebpack build --mode=production",
+        "build-cordova": "cwebpack build --mode=production --cordova",
+        "start": "cwebpack dev --mode=development"
     },
     "devDependencies": {
         "@corejslib/vue": "^7.0.0"
