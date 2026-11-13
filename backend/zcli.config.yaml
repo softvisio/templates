@@ -22,4 +22,4 @@ docs:
     api:
       url: wss://localhost/api
     rpc:
-      url: ws://localhost:81/api
+      url: ws://localhost:81/
