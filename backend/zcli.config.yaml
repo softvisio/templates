@@ -17,9 +17,3 @@ docs:
 
   aliases:
     /api: https://raw.githubusercontent.com/corejslib/core/main/docs/api.md
-
-  app:
-    api:
-      url: wss://localhost/
-    rpc:
-      url: ws://localhost:81/
