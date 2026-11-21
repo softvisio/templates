@@ -28,7 +28,7 @@ export default class Test {
 
     async start () {
         const res = await this.app.threads.start( {
-            "name": "worker",
+            "name": "test",
             "numberOfThreads": 1,
             "module": new URL( "threads/worker.js", import.meta.url ),
             "args": null,
