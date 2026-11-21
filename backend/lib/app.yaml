@@ -4,10 +4,12 @@ dependencies:
 services:
   main:
     components:
-      webpack: true
       api: true
       rpc: true
       telegramSupportBot: true
+      test: true
+      threads: true
+      webpack: true
 
 defaultService: main
 

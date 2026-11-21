@@ -1,0 +1,7 @@
+dependencies:
+  - dbh
+  - threads
+
+optionalDependencies: ~
+
+config: ~
