@@ -21,5 +21,3 @@ components:
 
   locales:
     locales: [en-GB, en-US, uk-UA, ru-RU]
-
-config: ~
